@@ -1,0 +1,111 @@
+.form_container {
+    width: 80%;
+    height: 85vh;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    margin-top: 1%;
+    font-family: "regular_roboto";
+    background-image: url(../../ressources/png/journey-memories-logo1000px3.png);
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-position-y: center;
+}
+
+.form {
+    width: 50%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(37, 37, 37);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    font-size: 90%;
+    text-align: center;
+    margin-top: 2.5%;
+    border-radius: 5%;
+    border-style: none;
+    width: 65%;
+    height: 4vh;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.363);
+    font-family: "regular_roboto";
+}
+
+.submit_input {
+    width: 40%;
+    height: 8vh;
+    margin-top: 15%;
+    color: rgb(207, 93, 17);
+    font-size: 120%;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.submit_input:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
+}
+
+@media only screen and (max-width: 830px) {
+    .form_container {
+        background-image: none;
+        justify-content: center;
+        height: 72vh;
+    }
+
+    input {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .submit_input {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    input {
+        width: 140%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .submit_input {
+        width: 55%;
+    }
+}

@@ -1,0 +1,146 @@
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 6vh;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    border-radius: 1.5%;
+    background-image: url(../../ressources/png/foxjourneymemorieslogo.png);
+    background-repeat: no-repeat;
+    background-position-x: 2%;
+    background-position-y: 55%;
+    background-size: 2.4%;
+    background-color: white;
+}
+
+.header_p {
+    margin-right: 4%;
+    font-family: "regular_roboto";
+    text-decoration: none;
+    color: black;
+}
+
+.main_container {
+    margin-top: 1%;
+    padding-top: 1%;
+    width: 100%;
+    height: 130vh;
+    /* border: solid brown 1px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 1%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+}
+
+.user_info_container {
+    border: solid 1px brown;
+    width: 48%;
+    height: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user_card {
+    width: 48%;
+    height: 95%;
+    border: solid 1px brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "regular_roboto";
+}
+
+.user_image {
+    border-radius: 50%;
+}
+
+.username {
+    width: 100%;
+    height: 7%;
+    text-align: center;
+    font-size: 135%;
+}
+
+.user_description {
+    height: 22%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    text-align: justify;
+    overflow: auto;
+}
+
+.user_stats {
+    width: 48%;
+    height: 95%;
+    border: solid 1px brown; 
+}
+
+.fav_games_container {
+    width: 48%;
+    height: 48%;
+    border: solid 1px brown;
+}
+
+.gamelist_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 48%;
+    border: solid brown 1px;
+    font-family: "regular_roboto";
+}
+
+.gamelist_title {
+    flex-basis: 100%;
+    border: solid 1px black ;
+    height: 10%;
+    text-align: center;
+    font-size: 140%;
+}
+
+.plateform_container {
+    flex-basis: 19%;
+    height: 75%;
+    border: solid 1px black ;
+}
+
+.constructor_title {
+    font-size: 135%;
+    text-align: center;
+    border: solid 1px black ;
+    height: 9%;
+    flex-basis: 100%;
+}
+
+.generations_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+    height: 70%;
+    border: 1px black solid;
+}
+
+.generation {
+    margin-top: 5%;
+    font-size: 115%;
+}
+
+
+body {
+    background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
+}

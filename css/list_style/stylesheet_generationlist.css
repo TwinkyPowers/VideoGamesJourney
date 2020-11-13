@@ -1,0 +1,116 @@
+.list_container {
+    width: 85%;
+    height: 85vh;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    margin-top: 1%;
+    font-family: "regular_roboto";
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20%;
+}
+
+.profil_link {
+    margin-left: 4%;
+    color: rgb(37, 37, 37);
+}
+
+h1 {
+    flex-basis: 30%;
+    color: rgb(37, 37, 37);
+}
+
+form {
+    flex-basis: 35%;
+    color: rgb(37, 37, 37);
+}
+
+input {
+    font-size: 90%;
+    text-align: center;
+    border-radius: 5%;
+    border-style: solid;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.363);
+    font-family: "regular_roboto";
+}
+
+.search_bar {
+    height: 5vh;
+    margin-right: 1%;
+}
+
+.submit_button {
+height: 5vh;
+margin-left: 1%;
+color: rgb(37, 37, 37);
+font-size: 95%;
+transition: 0.7s;
+cursor: pointer;
+}
+
+.game_add {
+    flex-basis: 20%;
+    color: rgb(207, 93, 17);
+    font-size: 115%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.363);
+    border-radius: 5%;
+    transition: 0.7s;
+    cursor: pointer;
+    text-decoration: none;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.games_array {
+    border: black solid 1px;
+    width: 100%;
+    height: 60%;
+    color: rgb(37, 37, 37);
+}
+
+h2 {
+    width: 100%;
+    height: 5%;
+    font-size: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.array_header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    border: solid black 1px;
+}
+
+.array_title {
+    flex-basis: 33.33%;
+    font-size: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
+}
