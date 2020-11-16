@@ -75,8 +75,8 @@ if(isset($_GET['success'])){
                             <optgroup label="Nintendo Portable">
                                 <option value="3ds">Nintendo 3DS</option>
                                 <option value="ds">Nintendo DS</option>
-                                <option value="gameboysp">GameBoy SP</option>
-                                <option value="gameboy">GameBoy</option>
+                                <option value="gameboysp">Nintendo GameBoy SP</option>
+                                <option value="gameboy">Nintendo GameBoy</option>
                             </optgroup>
                     </optgroup>
                     <optgroup label="PC">
