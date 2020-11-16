@@ -21,6 +21,12 @@
         if($_GET['error'] === 'existmail'){
             $error = 'Adresse email déjà existante';
         }
+        if($_GET['error'] === 'image'){
+            $error = 'Veuillez choisir une image d\'utilisateur';
+        }
+        if($_GET['error'] === 'imageformat'){
+            $error = 'Veuillez choisir un format d\'image valide (png ou jpg) d\'une taille inférieur à 1.5mo';
+        }
     }
 ?>
 <body>

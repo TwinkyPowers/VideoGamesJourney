@@ -3,12 +3,37 @@ $username = htmlspecialchars($_POST['username']);
 $email = htmlspecialchars($_POST['email_adress']);
 $passw1 = htmlspecialchars($_POST['passw1']);
 $passw2 = htmlspecialchars($_POST['passw2']);
+$description = '';
 
 if(strlen($username)>20){
     header("Location: inscription_form.php?error=length");
 }
 if($passw1 !=$passw2){
     header("Location: inscription_form.php?error=passw");
+}
+
+if(!isset($_FILES['userimage'])){
+    header("Location: inscription_form.php?error=image");
+}
+
+if($_FILES['userimage']['error'] == 0)
+{
+    if($_FILES['userimage']['size'] <=1500000)
+    {
+        $fileinfo = pathinfo($_FILES['userimage']['name']);
+        $getextension = $fileinfo['extension'];
+        $validextension = array('png', 'jpg', 'jpeg');
+        
+        if(in_array($getextension, $validextension))
+        {
+            move_uploaded_file($_FILES['userimage']['tmp_name'], 'client_images/' . basename($_FILES['userimage']['name']));
+            $userimagename = basename($_FILES['userimage']['name']);
+        }
+        else
+        {
+            header("Location: inscription_form.php?error=imageformat");
+        }
+    }
 }
 
 if($passw1 === $passw2){
@@ -37,8 +62,8 @@ if($passw1 === $passw2){
         header("Location: inscription_form.php?error=existmail");
     }
 
-    $query = $connectbdd->prepare('INSERT INTO users(username,email,passw) VALUES(?,?,?)');
-    $query->execute([$username,$email,$passw1]);
+    $query = $connectbdd->prepare('INSERT INTO users(username,email,passw,userdescription,userimage) VALUES(?,?,?,?,?)');
+    $query->execute([$username,$email,$passw1,$description,$userimagename]);
 
     header("Location: connection_form.php?accountcreate=1");
 }
