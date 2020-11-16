@@ -55,7 +55,21 @@ $result = $query->fetch();
 
 if(!empty($result))
 {
-    header("Location: add_new_game.php?error=gameexist");
+    $query1 = $connectbdd->prepare('SELECT platform FROM games WHERE gamename = ?');
+    $query1->execute([$gamename]);
+    $result1 = $query1->fetch();
+    
+    if($result1[0] === $platform)
+    {
+        header("Location: add_new_game.php?error=gameexist");
+    }
+    else
+    {
+        $query = $connectbdd->prepare('INSERT INTO games(gamename,platform,gametype,cover) VALUES(?,?,?,?)');
+        $query->execute([$gamename,$platform,$gametype,$covername]);
+
+        header("Location: add_new_game.php?success=gameadd");
+    }
 }
 else
 {
