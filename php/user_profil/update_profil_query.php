@@ -1,54 +1,97 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['id']))
+{
+    header("location: ../../index.php");
+}
+else
+{
+    $userid = $_SESSION['id'];
+    $username = $_SESSION['username'];
+    $userdescription = $_SESSION['userdescription'];
+    $userimage = $_SESSION['userimage'];
+}
+
 $newusername = htmlspecialchars($_POST['newusername']);
 $newdescription = htmlspecialchars($_POST['newdescription']);
 
 if(!empty($newusername)){
     if(strlen($newusername)<=20){
-        echo 'inclure new username en bdd';
-        
+        try {
+            $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
+            $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e){
+            die($e->getMessage());
+        }
+
+        $query = $connectbdd->prepare('UPDATE users SET username = ? WHERE id = ?');
+        $query->execute([$newusername, $userid]);
+
+        $_SESSION['username'] = $newusername;
     }
-    else {
-        echo 'renvoyer une erreur en get pseudo trop long';
+    elseif(strlen($newusername) >20){
+        header("Location: ./form_update_profil.php?error=usernamesize");
     }
 }
 else {
-    echo 'conserver username existant en bdd';
+    // echo 'conserver username existant en bdd';
 }
 
 if(!empty($newdescription)){
     if(strlen($newdescription)<=60){
-        echo 'inclure newdescription en bdd';
+        try {
+            $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
+            $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e){
+            die($e->getMessage());
+        }
+
+        $query1 = $connectbdd->prepare('UPDATE users SET userdescription = ? WHERE id = ?');
+        $query1->execute([$newdescription, $userid]);
+
+        $_SESSION['userdescription'] = $newdescription;
     }
     else {
-        echo 'renvoyer une erreur en get description trop longue';
+        header("Location: ./form_update_profil.php?error=descriptionsize");
     }
 }
 else {
-    echo 'conserver la description existante en bdd';
+    // echo 'conserver la description existante en bdd';
 }
 
-if(isset($_FILES['newimage'])){
-    if($_FILES['newimage']['size'] <=1500000)
-    {
-        $fileinfo = pathinfo($_FILES['newimage']['name']);
-        $getextension = $fileinfo['extension'];
-        $validextension = array('png', 'jpg', 'jpeg');
-        
-        if(in_array($getextension, $validextension))
-        {
-            move_uploaded_file($_FILES['newimage']['tmp_name'], '../inscription_connection/client_images/' . basename($_FILES['newimage']['name']));
-            $newuserimagename = basename($_FILES['newimage']['name']);
-        }
-        else
-        {
-            header("Location: ./form_update_profil.php?error=type");
-        }
-    }
-    else {
-        header("Location: ./form_update_profil.php?error=size");
-    }
+if($_FILES['newimage']['size'] === 0){
+    // echo 'conserver image existante';
 }
 else {
-    echo 'conserver l\'image existante en bdd';
+    if($_FILES['newimage']['error'] == 0){
+        if($_FILES['newimage']['size'] <=1500000){
+            $fileinfo = pathinfo($_FILES['newimage']['name']);
+            $getextension = $fileinfo['extension'];
+            $validextension = array('png', 'jpg', 'jpeg');
+            
+            if(in_array($getextension, $validextension)){
+                move_uploaded_file($_FILES['newimage']['tmp_name'], '../inscription_connection/client_images/' . basename($_FILES['newimage']['name']));
+                $newimagename = basename($_FILES['newimage']['name']);
+
+                try {
+                    $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
+                    $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                } catch(PDOException $e){
+                    die($e->getMessage());
+                }
+                
+                $query2 = $connectbdd->prepare('UPDATE users SET userimage = ? WHERE id = ?');
+                $query2->execute([$newimagename, $userid]);
+
+                $_SESSION['userimage'] = $newimagename;
+            }
+            else{
+                header("Location: ./form_update_profil.php?error=imageformat");
+            }
+        }
+    }
 }
+
+header("Location: ./form_update_profil.php?success=1");
 ?>

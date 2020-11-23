@@ -117,20 +117,20 @@ else
             </div>
             <div class="plateform_container">
                 <h3 class="constructor_title">
-                    PC
-                </h3>
-                <div class="generations_container">
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=pc">PC</a>
-                </div>
-            </div>
-            <div class="plateform_container">
-                <h3 class="constructor_title">
                     Autres
                 </h3>
                 <div class="generations_container">
                     <a class="generation" href="./gamelist/generationlist.php?getgeneration=dreamcast">SEGA DreamCast</a>
                     <a class="generation" href="./gamelist/generationlist.php?getgeneration=saturn">SEGA Saturn</a>
                     <a class="generation" href="./gamelist/generationlist.php?getgeneration=megadrive">SEGA Mega Drive</a>
+                </div>
+            </div>
+            <div class="plateform_container">
+                <h3 class="constructor_title">
+                    PC
+                </h3>
+                <div class="generations_container">
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=pc">PC</a>
                 </div>
             </div>
             

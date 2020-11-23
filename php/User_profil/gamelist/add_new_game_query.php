@@ -18,7 +18,7 @@ if(strlen($gamename)>40)
     header("Location: add_new_game.php?error=size");
 }
 
-if(!isset($_FILES['cover']))
+if($_FILES['cover']['size'] === 0)
 {
     header("Location: add_new_game.php?error=nonexistent");
 }

@@ -72,7 +72,7 @@ p {
 .submit_input {
     width: 40%;
     height: 8vh;
-    margin-top: 30%;
+    margin-top: 20%;
     color: rgb(207, 93, 17);
     font-size: 120%;
     transition: 0.7s;
@@ -82,6 +82,11 @@ p {
 .submit_input:hover {
     transform: scale(1.05);
     transition: 0.7s;
+}
+
+.alert {
+    text-align: center;
+    margin-top: 5%;
 }
 
 body {

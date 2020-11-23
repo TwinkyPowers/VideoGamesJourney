@@ -7,9 +7,22 @@
     <title>Modification profil | JourneyMemories</title>
 </head>
 <?php
-    if($_GET['error'] === ''){
-
+if(isset($_GET['error'])){
+    if($_GET['error'] === 'usernamesize'){
+        $info = 'Le nom d\'utilisateur doit contenir moins de 21 caractères';
     }
+    if($_GET['error'] === 'descriptionsize'){
+        $info = 'La description doit contenir moins de 61 caractères';
+    }
+    if($_GET['error'] === 'imageformat'){
+        $info = 'Veuillez selectionner une image au format png ou jpg/jpeg';
+    }
+}
+if(isset($_GET['success'])){
+    if($_GET['success'] === '1'){
+        $info = 'Les modifications ont été prises en compte';
+    }
+}
 ?>
 <body>
     <div class="form_container">
@@ -24,6 +37,18 @@
                 <input type="file" name="newimage" class="upload_image_input">
                 <input type="submit" name="submit" class="submit_input">
             </form>
+            <p class="alert">
+                <?php
+                    if(isset($_GET['error'])){
+                        echo $info;
+                    }
+                    elseif(isset($_GET['success'])){
+                        echo $info;
+                    }
+                    else{
+                    }
+                ?>
+            </p>
         </div>
     </div>
 </body>
