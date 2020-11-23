@@ -5,9 +5,18 @@ $passw1 = htmlspecialchars($_POST['passw1']);
 $passw2 = htmlspecialchars($_POST['passw2']);
 $description = '';
 
+if(empty($username)){
+    header("Location: inscription_form.php?error=empty");
+}
+
+if(!isset($username)){
+    header("Location: inscription_form.php?error=empty");
+}
+
 if(strlen($username)>20){
     header("Location: inscription_form.php?error=length");
 }
+
 if($passw1 !=$passw2){
     header("Location: inscription_form.php?error=passw");
 }

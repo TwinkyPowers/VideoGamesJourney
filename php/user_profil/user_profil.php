@@ -24,7 +24,7 @@ else
 </head>
 <body>
     <header>
-        <a class="header_p" href="../User_profil/update_profil.html">
+        <a class="header_p" href="./form_update_profil.php">
             Modification profil utilisateur
         </a>
         <a class="header_p" href="../misc/informations_about_jm.html">

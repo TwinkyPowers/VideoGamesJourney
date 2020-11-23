@@ -9,6 +9,9 @@
 <?php
     $error = '';
     if(isset($_GET['error'])){
+        if($_GET['error'] === 'empty'){
+            $error = 'Veuillez choisir un nom d\'utilisateur';
+        }
         if($_GET['error'] === 'length'){
             $error = 'Le nom d\'utilisateur est trop long';
         }

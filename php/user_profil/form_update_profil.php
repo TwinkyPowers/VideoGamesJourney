@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="../../css/user_profil_style/stylesheet_update_profil.css">
     <title>Modification profil | JourneyMemories</title>
 </head>
+<?php
+    if($_GET['error'] === ''){
+
+    }
+?>
 <body>
     <div class="form_container">
         <div class="form">
@@ -13,8 +18,8 @@
                 Modification profil
             </h1>
             <form method="POST" action="update_profil_query.php" enctype="multipart/form-data">
-                <input type="text" name="newusername" placeholder="Choisir un nouveau nom d'utilisateur" required>
-                <textarea placeholder="Modifier la description du profil" name="newdescription" class="description_text_area" required></textarea>
+                <input type="text" name="newusername" placeholder="Choisir un nouveau nom d'utilisateur">
+                <textarea placeholder="Modifier la description du profil" name="newdescription" class="description_text_area"></textarea>
                 <p>Choisir une nouvelle image de profil</p>
                 <input type="file" name="newimage" class="upload_image_input">
                 <input type="submit" name="submit" class="submit_input">
