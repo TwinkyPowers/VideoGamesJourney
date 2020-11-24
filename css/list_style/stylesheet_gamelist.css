@@ -1,0 +1,102 @@
+.list_container {
+    width: 95%;
+    height: 150vh;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    margin-top: 1%;
+    font-family: "regular_roboto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.profil_link {
+    margin-left: 4%;
+    color: rgb(37, 37, 37);
+}
+
+h1 {
+    flex-basis: 100%;
+    color: rgb(37, 37, 37);
+    text-align: center;
+}
+
+.games_array {
+    border: rgb(37, 37, 37) solid 2px;
+    border-radius: 0.5% 5% 5% 5%;
+    width: 99%;
+    height: 100%;
+    color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: scroll;
+    margin-bottom: 2%;
+}
+
+.array_title {
+    flex-basis: 25%;
+    font-size: 130%;
+    font-style: italic;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(37, 37, 37) 2px solid;
+    border-radius: 10%;
+}
+
+.array_content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* border: solid black 1px; */
+    flex-wrap: wrap;
+}
+
+.content {
+    flex-basis: 25%;
+    font-size: 110%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    flex-basis: 25%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 11vh;
+    border: rgb(37, 37, 37) solid 1px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
+}
