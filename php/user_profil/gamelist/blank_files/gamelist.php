@@ -35,22 +35,29 @@
             </a>
         </header>
         <h2>Playstation 5</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <span><img src="../../gamelist/covers/acoriginsps4.png"></span>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">pc</p>
-                    <span><img src="../../gamelist/covers/assassinscreedodysseycover.png"></span>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">pc</p>
-                </div>
-        </div>
+        <?php
+            $ps5 = 'playstation5';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$ps5]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
         <h2>Playstation 4</h2>
         <div class="games_array">
                 <div class="array_content">

@@ -37,7 +37,8 @@ if(isset($_GET['success'])){
                 <select name="type" required>
                     <option value="rpg">RPG</option>
                     <option value="action rpg">Action RPG</option>
-                    <option value="mmorpg">MMO RPG</option>
+                    <option value="mmo rpg">MMO RPG</option>
+                    <option value="action aventure">Action Aventure</option>
                     <option value="aventure">Aventure</option>
                     <option value="fps">FPS</option>
                     <option value="sport">SPORT</option>
@@ -45,7 +46,16 @@ if(isset($_GET['success'])){
                     <option value="simulation">Simulation</option>
                     <option value="beat them all">Beat Them All</option>
                     <option value="gestion">Gestion</option>
-                    <option value="plateform">Plateforme</option>
+                    <option value="plates formes">Plateforme</option>
+                    <option value="gta like">GTA like</option>
+                    <option value="rogue like lite">Rogue Like/Lite</option>
+                    <option value="strategie">Strategie</option>
+                    <option value="survie">Survie</option>
+                    <option value="sand box">Sand box</option>
+                    <option value="horreur">Horreur</option>
+                    <option value="survival horror">Survival horror</option>
+                    <option value="film interactif">Film interactif</option>
+                    <option value="point and click">Point and click</option>
                 </select>
                 <p>Sélectionner une plateforme</p>
                 <select name="plateforms" required>
