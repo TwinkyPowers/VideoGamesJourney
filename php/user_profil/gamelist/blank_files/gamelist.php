@@ -36,9 +36,9 @@
         </header>
         <h2>Playstation 5</h2>
         <?php
-            $ps5 = 'playstation5';
+            $platform = 'Playstation 5';
             $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
-            $query->execute([$ps5]);
+            $query->execute([$platform]);
             $result = $query->fetchAll();
 
             foreach($result as $gamescontent)
@@ -59,107 +59,245 @@
             }
         ?>
         <h2>Playstation 4</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                </div>
-        </div>
+        <?php
+            $platform = 'Playstation 4';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
         <h2>Playstation 3</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                </div>
-        </div>
+        <?php
+            $platform = 'Playstation 3';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
         <h2>Playstation 2</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                </div>
-        </div>
+        <?php
+            $platform = 'Playstation 2';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
         <h2>Playstation 1</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                </div>
-        </div>
+        <?php
+            $platform = 'Playstation 1';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
         <h2>Playstation portable Vita</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                </div>
-        </div>
+        <?php
+            $platform = 'Playstation portable Vita';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
         <h2>Playstation portable</h2>
-        <div class="games_array">
-                <div class="array_content">
-                    <p class="array_title">Jaquette</p>
-                    <p class="array_title">Nom</p>
-                    <p class="array_title">Genre</p>
-                    <p class="array_title">Plateforme</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                    <p class="content">image</p>
-                    <p class="content">Skyrim</p>
-                    <p class="content">rpg</p>
-                    <p class="content">ps4</p>
-                </div>
-        </div>
+        <?php
+            $platform = 'Playstation Portable';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
+        <h2>Xbox Series X</h2>
+        <?php
+            $platform = 'Xbox series x';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
+        <h2>Xbox One</h2>
+        <?php
+            $platform = 'Xbox one';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
+        <h2>Xbox 360</h2>
+        <?php
+            $platform = 'Xbox 360';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
+        <h2>Xbox</h2>
+        <?php
+            $platform = 'Xbox';
+            $query = $connectbdd->prepare('SELECT * FROM games WHERE platform = ?');
+            $query->execute([$platform]);
+            $result = $query->fetchAll();
+
+            foreach($result as $gamescontent)
+            {
+                echo 
+                "<div class=\"games_array\">
+                    <div class=\"array_content\">
+                        <p class=\"array_title\">Jaquette</p>
+                        <p class=\"array_title\">Nom</p>
+                        <p class=\"array_title\">Genre</p>
+                        <p class=\"array_title\">Plateforme</p>
+                        <span><img src=\"../../gamelist/covers/".$gamescontent["cover"]."\"></span>
+                        <p class=\"content\">".$gamescontent["gamename"]."</p>
+                        <p class=\"content\">".$gamescontent["gametype"]."</p>
+                        <p class=\"content\">".$gamescontent["platform"]."</p>
+                    </div>
+                </div>";
+            }
+        ?>
     </div>
 </body>
 </html>

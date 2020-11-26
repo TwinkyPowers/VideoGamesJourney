@@ -60,37 +60,37 @@ if(isset($_GET['success'])){
                 <p>Sélectionner une plateforme</p>
                 <select name="plateforms" required>
                     <optgroup label="Sony">
-                        <option value="playstation5">Playstation 5</option>
-                        <option value="playstation4">Playstation 4</option>
-                        <option value="playstation3">Playstation 3</option>
-                        <option value="playstation2">Playstation 2</option>
-                        <option value="playstation1">Playstation 1</option>
-                        <option value="psp">Playstation Portable</option>
-                        <option value="psvita">Playstation Vita</option>
+                        <option value="Playstation 5">Playstation 5</option>
+                        <option value="Playstation 4">Playstation 4</option>
+                        <option value="Playstation 3">Playstation 3</option>
+                        <option value="Playstation 2">Playstation 2</option>
+                        <option value="Playstation 1">Playstation 1</option>
+                        <option value="Playstation Portable">Playstation Portable</option>
+                        <option value="Playstation portable Vita">Playstation Vita</option>
                     </optgroup>
                     <optgroup label="Microsoft">
-                        <option value="xboxseriesx">Xbox Series X</option>
-                        <option value="xboxone">Xbox One</option>
-                        <option value="xbox360">Xbox 360</option>
-                        <option value="xbox">Xbox</option>
+                        <option value="Xbox series x">Xbox Series X</option>
+                        <option value="Xbox one">Xbox One</option>
+                        <option value="Xbox 360">Xbox 360</option>
+                        <option value="Xbox">Xbox</option>
                     </optgroup>
                     <optgroup label="Nintendo">
-                        <option value="switch">Nintendo Switch</option>
-                        <option value="wiiu">Nintendo Wii U</option>
-                        <option value="wii">Nintendo Wii</option>
-                        <option value="gamecube">Nintendo GameCube</option>
-                        <option value="n64">Nintendo 64</option>
-                        <option value="snes">SNES</option>
-                        <option value="nes">NES</option>
+                        <option value="Switch">Nintendo Switch</option>
+                        <option value="Wii U">Nintendo Wii U</option>
+                        <option value="Wii">Nintendo Wii</option>
+                        <option value="Gamecube">Nintendo GameCube</option>
+                        <option value="N64">Nintendo 64</option>
+                        <option value="SNES">SNES</option>
+                        <option value="NES">NES</option>
                             <optgroup label="Nintendo Portable">
-                                <option value="3ds">Nintendo 3DS</option>
-                                <option value="ds">Nintendo DS</option>
-                                <option value="gameboysp">Nintendo GameBoy SP</option>
-                                <option value="gameboy">Nintendo GameBoy</option>
+                                <option value="3DS">Nintendo 3DS</option>
+                                <option value="DS">Nintendo DS</option>
+                                <option value="Gameboy SP">Nintendo GameBoy SP</option>
+                                <option value="GameBoy">Nintendo GameBoy</option>
                             </optgroup>
                     </optgroup>
                     <optgroup label="PC">
-                        <option value="pc">PC</option>
+                        <option value="PC">PC</option>
                     </optgroup>
                     <optgroup label="Others">
                         <optgroup label="SEGA">
