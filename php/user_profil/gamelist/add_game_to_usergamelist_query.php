@@ -24,7 +24,17 @@ else
         die($e->getMessage());
     }
 
-    $query = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid) VALUES(?,?)');
-    $query->execute([$userid,$gameid]);
+    $query1 = $connectbdd->prepare('SELECT * FROM userslinkgames WHERE id = ? AND gameid = ?');
+    $query1->execute([$userid, $gameid]);
+    $result = $query1->fetch();
+
+    if(!empty($result)){
+        header("location: ./gamelist.php?error=exist");
+    }
+    else{
+        $query = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid) VALUES(?,?)');
+        $query->execute([$userid,$gameid]);
+        header("location: ./link_to_gamelist_or_userprofil.php?success=1");
+    }
 }
 ?>

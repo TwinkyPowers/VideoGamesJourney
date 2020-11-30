@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="../../../css/list_style/stylesheet_gamelist.css">
     <title>GameList | JourneyMemories</title>
 </head>
+<?php
+    // erreur GET ici
+?>
 <body>
     <div class="list_container">
         <header>
