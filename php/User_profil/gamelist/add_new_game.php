@@ -94,9 +94,9 @@ if(isset($_GET['success'])){
                     </optgroup>
                     <optgroup label="Others">
                         <optgroup label="SEGA">
-                            <option value="dreamcast">DreamCast</option>
-                            <option value="segasaturn">Saturn</option>
-                            <option value="megadrive">Mega Drive</option>
+                            <option value="Dream cast">DreamCast</option>
+                            <option value="Sega saturn">Saturn</option>
+                            <option value="Megadrive">Mega Drive</option>
                         </optgroup>
                     </optgroup>
                 </select>

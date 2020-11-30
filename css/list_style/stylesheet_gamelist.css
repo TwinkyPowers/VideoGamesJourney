@@ -2,7 +2,7 @@
     width: 95%;
     height: auto;
     background-color: whitesmoke;
-    border-radius: 5%;
+    border-radius: 5% 5% 1% 1%;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
     margin-top: 1%;
     font-family: "regular_roboto";
@@ -35,7 +35,7 @@ h1 {
     transition: 0.7s;
     cursor: pointer;
     text-decoration: none;
-    height: 40%;
+    height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,21 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.gamepagelink {
+    flex-basis: 25%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.363);
+    border-radius: 5%;
+    color: rgb(207, 93, 17);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 110%;
+    transition: 0.7s;
 }
 
 span {

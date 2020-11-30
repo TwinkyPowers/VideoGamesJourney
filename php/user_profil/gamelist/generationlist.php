@@ -35,7 +35,7 @@ if(!isset($_SESSION['id']))
                 </label>
                 <input type="submit" name="submit" value="Ajouter" class="submit_button">
             </form>
-            <a href="" class="game_add">
+            <a href="./add_new_game.php" class="game_add">
                 Ajouter un jeu non existant
             </a>
         </header>

@@ -31,7 +31,7 @@ if($_FILES['userimage']['error'] == 0)
     {
         $fileinfo = pathinfo($_FILES['userimage']['name']);
         $getextension = $fileinfo['extension'];
-        $validextension = array('png', 'jpg', 'jpeg');
+        $validextension = array('png', 'jpg', 'jpeg', 'PNG', 'JPG', 'JPEG');
         
         if(in_array($getextension, $validextension))
         {
