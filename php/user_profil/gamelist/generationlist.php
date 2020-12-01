@@ -5,6 +5,21 @@ if(!isset($_SESSION['id']))
 {
     header("location: ../../index.php");
 }
+else{
+    $userid = $_SESSION['id'];
+    $username = $_SESSION['username'];
+    $userdescription = $_SESSION['userdescription'];
+    $userimage = $_SESSION['userimage'];
+
+    {
+        try {
+            $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
+            $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e){
+            die($e->getMessage());
+        }
+    }
+}
 ?>
 
 
@@ -18,42 +33,44 @@ if(!isset($_SESSION['id']))
 </head>
 <body>
     <div class="list_container">
-        <a class="profil_link" href="">
-            Retour
-        </a>
         <header>
             <h1>
                 nom de la génération
             </h1>
-            <form method="" action="">
-                <input type="search" name="search_bar" placeholder="Rechercher un jeu" class="search_bar">
-                <label>Terminé
-                    <input type="radio" name="status" value="finished" id="finished">
-                </label>
-                <label>En cours
-                    <input type="radio" name="status" value="inprogress" id="inprogress">
-                </label>
-                <input type="submit" name="submit" value="Ajouter" class="submit_button">
-            </form>
+            <a href="./gamelist.php" class="game_add">
+                Ajouter un jeu à ma GameList
+            </a>
             <a href="./add_new_game.php" class="game_add">
                 Ajouter un jeu non existant
             </a>
         </header>
         <div class="games_array">
-            <h2>
-                Jeux terminés
-            </h2>
-                <div class="array_header">
-                    <p class="array_title">
-                        Jaquette
-                    </p>
-                    <p class="array_title">
-                        Nom
-                    </p>
-                    <p class="array_title">
-                        Genre
-                    </p>
-                </div>
+            <div class="array_content">
+                <p class="array_title">Jaquette</p>
+                <p class="array_title">Nom</p>
+                <p class="array_title">Genre</p>
+                <p class="array_title">...</p>
+                <?php
+                $query = $connectbdd->prepare('SELECT * FROM userslinkgames WHERE id = ?');
+                $query->execute([$userid]);
+                $result = $query->fetchAll();
+
+                // var_dump($result);
+                // echo $result[1][1];
+
+                foreach($result as $gameresult){
+                    // var_dump($gameresult['gameid']);
+                    $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ?');
+                    $query->execute([$gameresult['gameid']]);
+                    $gamecontent = $query->fetch();
+
+                    echo "<div>".$gamecontent['gamename']."</div>";
+
+
+                }
+                
+                ?>
+            </div>
         </div>
     </div>
 </body>
