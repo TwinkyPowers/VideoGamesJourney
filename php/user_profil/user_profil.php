@@ -76,13 +76,13 @@ else
                     Sony
                 </h3>
                 <div class="generations_container">
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=ps5">Playstation 5</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=ps4">Playstation 4</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=ps3">Playstation 3</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=ps2">Playstation 2</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=ps1">Playstation 1</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=psvita">Playstation Vita</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=psp">Playstation Portable</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 5">Playstation 5</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 4">Playstation 4</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 3">Playstation 3</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 2">Playstation 2</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 1">Playstation 1</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation Portable">Playstation Vita</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation portable Vita">Playstation Portable</a>
                 </div>
             </div>
             <div class="plateform_container">
@@ -90,10 +90,10 @@ else
                     Microsoft
                 </h3>
                 <div class="generations_container">
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=xboxseriesx">Xbox Series X</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=xboxone">Xbox One</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=xbox360">Xbox 360</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=xbox">Xbox</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Xbox series x">Xbox Series X</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Xbox one">Xbox One</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Xbox 360">Xbox 360</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Xbox">Xbox</a>
                 </div>
             </div>
             <div class="plateform_container">
@@ -101,17 +101,17 @@ else
                     Nintendo
                 </h3>
                 <div class="generations_container">
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=switch">Nintendo Switch</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=wiiu">Nintendo Wii U</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=wii">Nintendo Wii</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=gamecube">Nintendo GameCube</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=n64">Nintendo 64</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=snes">SNES</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=nes">NES</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=3ds">Nintendo 3DS</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=ds">Nintendo DS</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=gameboysp">Nintendo GameBoy SP</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=gameboy">Nintendo GameBoy</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Switch">Nintendo Switch</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Wii U">Nintendo Wii U</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Wii">Nintendo Wii</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Gamecube">Nintendo GameCube</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=N64">Nintendo 64</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=SNES">SNES</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=NES">NES</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=3DS">Nintendo 3DS</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=DS">Nintendo DS</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Gameboy SP">Nintendo GameBoy SP</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=GameBoy">Nintendo GameBoy</a>
 
                 </div>
             </div>
@@ -120,9 +120,9 @@ else
                     Autres
                 </h3>
                 <div class="generations_container">
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=dreamcast">SEGA DreamCast</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=saturn">SEGA Saturn</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=megadrive">SEGA Mega Drive</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Dream cast">SEGA DreamCast</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Sega saturn">SEGA Saturn</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Megadrive">SEGA Mega Drive</a>
                 </div>
             </div>
             <div class="plateform_container">
@@ -130,7 +130,7 @@ else
                     PC
                 </h3>
                 <div class="generations_container">
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=pc">PC</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=PC">PC</a>
                 </div>
             </div>
             

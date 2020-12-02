@@ -35,7 +35,7 @@ else{
     <div class="list_container">
         <header>
             <h1>
-                nom de la génération
+                <?php echo $_GET['getgeneration'] ?>
             </h1>
             <a href="./gamelist.php" class="game_add">
                 Ajouter un jeu à ma GameList
@@ -44,6 +44,7 @@ else{
                 Ajouter un jeu non existant
             </a>
         </header>
+        <h2>Jeux terminés</h2>
         <div class="games_array">
             <div class="array_content">
                 <p class="array_title">Jaquette</p>
@@ -55,18 +56,19 @@ else{
                 $query->execute([$userid]);
                 $result = $query->fetchAll();
 
-                // var_dump($result);
-                // echo $result[1][1];
+                if($_GET['getgeneration'] === 'PC'){
+                    $platform = 'PC';
+                    foreach($result as $gameresult){
 
-                foreach($result as $gameresult){
-                    // var_dump($gameresult['gameid']);
-                    $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ?');
-                    $query->execute([$gameresult['gameid']]);
-                    $gamecontent = $query->fetch();
+                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
+                        $query->execute([$gameresult['gameid'], $platform]);
+                        $gamecontent = $query->fetch();
 
-                    echo "<div>".$gamecontent['gamename']."</div>";
-
-
+                        echo"<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
+                            <p class=\"content\">".$gamecontent["gamename"]."</p>
+                            <p class=\"content\">".$gamecontent["gametype"]."</p>
+                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Actualiser</a>";
+                    }
                 }
                 
                 ?>
