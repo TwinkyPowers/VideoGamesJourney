@@ -74,6 +74,7 @@ h1 {
 .array_title {
     flex-basis: 25%;
     font-size: 130%;
+    height: 5vh;
     font-style: italic;
     color: black;
     display: flex;
