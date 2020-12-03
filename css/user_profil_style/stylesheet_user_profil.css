@@ -16,9 +16,23 @@ header {
 
 .header_p {
     margin-right: 4%;
+    height: 3vh;
     font-family: "regular_roboto";
     text-decoration: none;
-    color: black;
+    color: rgb(37, 37, 37);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.397);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 10%;
+    font-size: 2vh;
+    transition: 0.7s;
+}
+
+.header_p:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
 }
 
 .main_container {
@@ -60,21 +74,25 @@ header {
     border-radius: 50%;
     width: 61%;
     height: 45%;
+    border-style: inset;
 }
 
 .username {
     width: 100%;
     height: 7%;
     text-align: center;
-    font-size: 135%;
+    font-size: 180%;
+    color: rgb(37, 37, 37);
 }
 
 .user_description {
     height: 22%;
+    font-size: 140%;
     padding-left: 1.5%;
     padding-right: 1.5%;
     text-align: justify;
     overflow: auto;
+    color: rgb(37, 37, 37);
 }
 
 .user_stats {
@@ -104,7 +122,11 @@ header {
     border: solid 1px black ;
     height: 10%;
     text-align: center;
-    font-size: 140%;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(37, 37, 37);
 }
 
 .plateform_container {
@@ -114,11 +136,15 @@ header {
 }
 
 .constructor_title {
-    font-size: 135%;
+    font-size: 180%;
     text-align: center;
     border: solid 1px black ;
     height: 9%;
     flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(37, 37, 37);
 }
 
 .generations_container {
@@ -132,7 +158,12 @@ header {
 
 .generation {
     margin-top: 5%;
-    font-size: 115%;
+    font-size: 130%;
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
+    border-radius: 10%;
+    padding: 2%;
 }
 
 

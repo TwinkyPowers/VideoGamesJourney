@@ -25,13 +25,13 @@ else
 <body>
     <header>
         <a class="header_p" href="./form_update_profil.php">
-            Modification profil utilisateur
+            Modification du profil
         </a>
-        <a class="header_p" href="../misc/informations_about_jm.html">
-            Fonctionnement du site
-        </a>
-        <a class="header_p" href="../misc/contacts.html">
+        <a class="header_p" href="">
             Contacts
+        </a>
+        <a class="header_p" href="">
+            Fonctionnement du site
         </a>
         <a class="header_p" href="../User_profil/deconnection.php">
             Déconnexion
@@ -69,7 +69,7 @@ else
 
         <div class="gamelist_container">
             <h2 class="gamelist_title">
-                GameList
+                My GameList
             </h2>
             <div class="plateform_container">
                 <h3 class="constructor_title">

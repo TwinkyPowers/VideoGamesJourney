@@ -3,7 +3,10 @@ session_start();
 
 if(!isset($_SESSION['id']))
 {
-    header("location: ../../index.php");
+    header("location: ../../../index.php");
+}
+elseif(!isset($_GET['getgeneration'])){
+    header("location: ../user_profil.php");
 }
 else{
     $userid = $_SESSION['id'];
@@ -22,7 +25,6 @@ else{
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +34,20 @@ else{
     <title>GenerationList | JourneyMemories</title>
 </head>
 <body>
+    <div class="nav_bar">
+        <a class="nav_bar_links" href="../user_profil.php">
+            Mon profil
+        </a>
+        <a class="nav_bar_links" href="">
+            Contacts
+        </a>
+        <a class="nav_bar_links" href="">
+            Fonctionnement du site
+        </a>
+        <a class="nav_bar_links" href="../deconnection.php">
+            Déconnexion
+        </a>
+    </div>
     <div class="list_container">
         <header>
             <h1>
@@ -55,421 +71,21 @@ else{
                 $query = $connectbdd->prepare('SELECT gameid FROM userslinkgames WHERE id = ?');
                 $query->execute([$userid]);
                 $result = $query->fetchAll();
-
-                if($_GET['getgeneration'] === 'Playstation 5'){
-                    $platform = 'Playstation 5';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Playstation 4'){
-                    $platform = 'Playstation 4';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Playstation 3'){
-                    $platform = 'Playstation 3';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Playstation 2'){
-                    $platform = 'Playstation 2';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Playstation 1'){
-                    $platform = 'Playstation 1';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Playstation portable Vita'){
-                    $platform = 'Playstation portable Vita';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Playstation Portable'){
-                    $platform = 'Playstation Portable';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Xbox series X'){
-                    $platform = 'Xbox series X';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Xbox one'){
-                    $platform = 'Xbox one';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Xbox 360'){
-                    $platform = 'Xbox 360';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Xbox'){
-                    $platform = 'Xbox';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Switch'){
-                    $platform = 'Switch';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Wii U'){
-                    $platform = 'Wii U';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Wii'){
-                    $platform = 'Wii';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Gamecube'){
-                    $platform = 'Gamecube';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'N64'){
-                    $platform = 'N64';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'SNES'){
-                    $platform = 'SNES';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'NES'){
-                    $platform = 'NES';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === '3DS'){
-                    $platform = '3DS';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'DS'){
-                    $platform = 'DS';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Gameboy SP'){
-                    $platform = 'Gameboy SP';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'GameBoy'){
-                    $platform = 'GameBoy';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'PC'){
-                    $platform = 'PC';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
+                
+                if(isset($_GET['getgeneration'])){
+                    $platform = $_GET['getgeneration'];
+                        foreach($result as $getgameid){
+                            $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
+                            $query->execute([$getgameid['gameid'], $platform]);
+                            $gamecontent = $query->fetch();
                         
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
+                            if(isset($gamecontent['cover'])){
+                                echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
+                                <p class=\"content\">".$gamecontent["gamename"]."</p>
+                                <p class=\"content\">".$gamecontent["gametype"]."</p>
+                                <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
+                            }
                     }
-                }
-
-                if($_GET['getgeneration'] === 'Dream cast'){
-                    $platform = 'Dream cast';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Sega saturn'){
-                    $platform = 'Sega saturn';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
-                }
-
-                if($_GET['getgeneration'] === 'Megadrive'){
-                    $platform = 'Megadrive';
-                    foreach($result as $getgameid){
-                        $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
-                        $query->execute([$getgameid['gameid'], $platform]);
-                        $gamecontent = $query->fetch();
-
-                        if(isset($gamecontent['cover'])){
-                            echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                            <p class=\"content\">".$gamecontent["gamename"]."</p>
-                            <p class=\"content\">".$gamecontent["gametype"]."</p>
-                            <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
-                        }
-                    }  
                 }
                 ?>
             </div>

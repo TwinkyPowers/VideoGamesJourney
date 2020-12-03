@@ -67,6 +67,7 @@ p {
 
 .upload_image_input{
     border-style: none;
+    box-shadow: none;
 }
 
 .submit_input {

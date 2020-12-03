@@ -28,6 +28,20 @@
     // erreur GET ici
 ?>
 <body>
+    <div class="nav_bar">
+        <a class="nav_bar_links" href="../user_profil.php">
+            Mon profil
+        </a>
+        <a class="nav_bar_links" href="">
+            Contacts
+        </a>
+        <a class="nav_bar_links" href="">
+            Fonctionnement du site
+        </a>
+        <a class="nav_bar_links" href="../deconnection.php">
+            Déconnexion
+        </a>
+    </div>
     <div class="list_container">
         <header>
             <h1>
