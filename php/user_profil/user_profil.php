@@ -20,7 +20,7 @@ else
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/user_profil_style/stylesheet_user_profil.css">
-    <title>Profil | JourneyMemories</title>
+    <title>Profil | VideoGamesJourney</title>
 </head>
 <body>
     <header>
