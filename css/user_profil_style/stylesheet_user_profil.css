@@ -3,31 +3,35 @@ header {
     justify-content: right;
     align-items: center;
     width: 100%;
-    height: 6vh;
+    height: 10vh;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
-    border-radius: 1.5%;
-    background-image: url(../../ressources/png/foxjourneymemorieslogo.png);
+    border-radius: 1%;
+    /* background-image: url(../../ressources/png/foxjourneymemorieslogo.png);
     background-repeat: no-repeat;
     background-position-x: 2%;
     background-position-y: 55%;
-    background-size: 2.4%;
-    background-color: white;
+    background-size: 2.4%; */
+    background-color: #393e46;
 }
 
 .header_p {
-    margin-right: 4%;
-    height: 3vh;
+    margin-right: 3%;
+    height: 7vh;
     font-family: "regular_roboto";
     text-decoration: none;
-    color: rgb(37, 37, 37);
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.397);
-    border-radius: 10%;
+    color: rgb(217, 165, 22);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 10%;
-    font-size: 2vh;
+    flex-basis: 13%;
     transition: 0.7s;
+    font-size: 115%;
+    padding: 0.1%;
+    border: solid 2px rgb(31, 31, 31);
+    background-color: #404650;
 }
 
 .header_p:hover {
@@ -44,67 +48,87 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: white;
+    background-color: #393e46;
     border-radius: 1%;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
 }
 
 .user_info_container {
-    border: solid 1px brown;
+    /* border: solid 1px brown; */
     width: 48%;
     height: 48%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
 }
 
 .user_card {
     width: 48%;
     height: 95%;
-    border: solid 1px brown;
+    /* border: solid 1px brown; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: "regular_roboto";
+    background-color: #404650;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
 }
 
 .user_image {
     border-radius: 50%;
     width: 61%;
     height: 45%;
-    border-style: inset;
+    border: solid 1px rgb(31, 31, 31);
+    /* border-style: inset; */
 }
 
 .username {
     width: 100%;
-    height: 7%;
+    height: 5%;
     text-align: center;
-    font-size: 180%;
-    color: rgb(37, 37, 37);
+    font-size: 150%;
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
 }
 
 .user_description {
-    height: 22%;
-    font-size: 140%;
+    height: 10%;
+    font-size: 110%;
     padding-left: 1.5%;
     padding-right: 1.5%;
     text-align: justify;
     overflow: auto;
-    color: rgb(37, 37, 37);
+    color: #bbbbbb;
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750); */
 }
 
 .user_stats {
     width: 48%;
     height: 95%;
-    border: solid 1px brown; 
+    background-color: #404650;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+    background-image: url(../../ressources/png/underconstruction.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
 }
 
 .fav_games_container {
     width: 48%;
     height: 48%;
-    border: solid 1px brown;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+    background-image: url(../../ressources/png/underconstruction.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
 }
 
 .gamelist_container {
@@ -113,38 +137,49 @@ header {
     flex-wrap: wrap;
     width: 95%;
     height: 48%;
-    border: solid brown 1px;
+    border: solid 1px rgb(31, 31, 31);
     font-family: "regular_roboto";
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+    padding-bottom: 0.5%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    border-radius: 1%;
+    /* background-color:  #454a53; */
 }
 
 .gamelist_title {
     flex-basis: 100%;
-    border: solid 1px black ;
+    /* border: solid 1px black ; */
     height: 10%;
     text-align: center;
     font-size: 200%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(37, 37, 37);
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
 }
 
 .plateform_container {
     flex-basis: 19%;
     height: 75%;
-    border: solid 1px black ;
+    /* box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.521); */
+    border-radius: 1%;
+    background-color: #404650;
+    border: solid 1px rgb(31, 31, 31);
 }
 
 .constructor_title {
     font-size: 180%;
     text-align: center;
-    border: solid 1px black ;
+    /* border: solid 1px black ; */
     height: 9%;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(37, 37, 37);
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
 }
 
 .generations_container {
@@ -153,24 +188,33 @@ header {
     flex-direction: column;
     overflow: auto;
     height: 70%;
-    border: 1px black solid;
+    /* border: 1px black solid; */
 }
 
 .generation {
     margin-top: 5%;
     font-size: 130%;
     text-decoration: none;
-    color: rgb(37, 37, 37);
+    color: rgb(217, 165, 22);
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
     border-radius: 10%;
     padding: 2%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    transition: 0.7s;
+    /* border: solid 1px rgb(31, 31, 31); */
+}
+
+.generation:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
 }
 
 
 body {
-    background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336));
+    /* background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336)); */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #222831;
 }
 
 @font-face {
