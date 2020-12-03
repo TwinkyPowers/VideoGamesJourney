@@ -39,7 +39,7 @@ else {
 }
 
 if(!empty($newdescription)){
-    if(strlen($newdescription)<=60){
+    if(strlen($newdescription)<=100){
         try {
             $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
             $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

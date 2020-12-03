@@ -12,6 +12,7 @@ header {
     background-position-y: 55%;
     background-size: 2.4%; */
     background-color: #393e46;
+    border: solid 1px rgb(31, 31, 31);
 }
 
 .header_p {
@@ -51,6 +52,7 @@ header {
     background-color: #393e46;
     border-radius: 1%;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    border: solid 1px rgb(31, 31, 31);
 }
 
 .user_info_container {
@@ -98,11 +100,11 @@ header {
 }
 
 .user_description {
-    height: 10%;
+    height: 15%;
     font-size: 110%;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    text-align: justify;
+    text-align: center;
     overflow: auto;
     color: #bbbbbb;
     /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750); */
@@ -129,6 +131,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
 }
 
 .gamelist_container {
