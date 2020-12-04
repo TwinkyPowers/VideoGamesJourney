@@ -41,6 +41,7 @@
     background-color: #393e46;
     border-radius: 0.1%;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    border: solid 1px rgb(31, 31, 31);
     margin-top: 1%;
     font-family: "regular_roboto";
     display: flex;

@@ -6,19 +6,27 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: whitesmoke;
+    background-color: #404650;
+    border: solid 1px rgb(31, 31, 31);
     border-radius: 5%;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
     margin-top: 1%;
     font-family: "regular_roboto";
 }
 
+h1 {
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
+}
+
 a {
     margin-top: 5%;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.363);
-    border-radius: 5%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    border: solid 2px rgb(31, 31, 31);
+    border-radius: 1%;
     width: 35%;
-    height: 5vh;
+    height: 8vh;
     font-size: 115%;
     display: flex;
     justify-content: center;
@@ -27,7 +35,7 @@ a {
     text-decoration: none;
     transition: 0.7s;
     cursor: pointer;
-    color: rgb(207, 93, 17);
+    color: rgb(217, 165, 22);
 }
 
 a:hover {
@@ -40,9 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(rgb(250, 122, 18), rgba(255, 82, 2, 0.336));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #222831;
 }
 
 @font-face {
