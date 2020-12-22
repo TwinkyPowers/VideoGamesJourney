@@ -17,7 +17,7 @@
                 <input type="password" name="passw" placeholder="Mot de passe" required>
                 <input type="submit" name="submit" class="submit_input">
             </form>
-            <a href="./lost_passw_form.php">Mot de passe oublié</a>
+            <!-- <a href="./lost_passw_form.php">Mot de passe oublié</a> -->
         </div>
     </div>
     <p>

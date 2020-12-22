@@ -83,7 +83,7 @@ else{
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
                                 <p class=\"content\">".$gamecontent["gamename"]."</p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
-                                <a href=\"./delete_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Supprimer ce jeu de ma GameList</a>";
+                                <a href=\"./update_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
                             }
                     }
                 }

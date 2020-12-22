@@ -44,7 +44,7 @@
                 <input type="password" name="passw1" placeholder="Mot de passe" required>
                 <input type="password" name="passw2" placeholder="Confirmation mot de passe" required>
                 <p>Choisir une image de profil</p>
-                <input type="file" name="userimage">
+                <input type="file" name="userimage" class="upload_input">
                 <input type="submit" name="submit" value="Envoyer" class="submit_input">
             </form>
             <p class="error">
