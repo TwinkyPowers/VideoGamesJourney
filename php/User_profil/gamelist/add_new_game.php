@@ -56,6 +56,7 @@ if(isset($_GET['success'])){
                     <option value="survival horror">Survival horror</option>
                     <option value="film interactif">Film interactif</option>
                     <option value="point and click">Point and click</option>
+                    <option value="Combat">Combat</option>
                 </select>
                 <p>Sélectionner une plateforme</p>
                 <select name="plateforms" required>

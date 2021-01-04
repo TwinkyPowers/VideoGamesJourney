@@ -91,6 +91,68 @@ else{
                 ?>
             </div>
         </div>
+
+        <h2>Jeux en cours</h2>
+        <div class="games_array">
+            <div class="array_content">
+                <p class="array_title">Jaquette</p>
+                <p class="array_title">Nom</p>
+                <p class="array_title">Genre</p>
+                <p class="array_title">...</p>
+                <?php
+                $query = $connectbdd->prepare('SELECT gameid FROM inprogressuserslinkgames WHERE id = ?');
+                $query->execute([$userid]);
+                $result = $query->fetchAll();
+                
+                if(isset($_GET['getgeneration'])){
+                    $platform = htmlspecialchars($_GET['getgeneration']);
+                        foreach($result as $getgameid){
+                            $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
+                            $query->execute([$getgameid['gameid'], $platform]);
+                            $gamecontent = $query->fetch();
+                        
+                            if(isset($gamecontent['cover'])){
+                                echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
+                                <p class=\"content\">".$gamecontent["gamename"]."</p>
+                                <p class=\"content\">".$gamecontent["gametype"]."</p>
+                                <a href=\"./update_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
+                            }
+                    }
+                }
+                ?>
+            </div>
+        </div>
+
+        <h2>Liste de souhaits</h2>
+        <div class="games_array">
+            <div class="array_content">
+                <p class="array_title">Jaquette</p>
+                <p class="array_title">Nom</p>
+                <p class="array_title">Genre</p>
+                <p class="array_title">...</p>
+                <?php
+                $query = $connectbdd->prepare('SELECT gameid FROM wishlistuserslinkgames WHERE id = ?');
+                $query->execute([$userid]);
+                $result = $query->fetchAll();
+                
+                if(isset($_GET['getgeneration'])){
+                    $platform = htmlspecialchars($_GET['getgeneration']);
+                        foreach($result as $getgameid){
+                            $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
+                            $query->execute([$getgameid['gameid'], $platform]);
+                            $gamecontent = $query->fetch();
+                        
+                            if(isset($gamecontent['cover'])){
+                                echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
+                                <p class=\"content\">".$gamecontent["gamename"]."</p>
+                                <p class=\"content\">".$gamecontent["gametype"]."</p>
+                                <a href=\"./update_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
+                            }
+                    }
+                }
+                ?>
+            </div>
+        </div>
     </div>
 </body>
 </html>
