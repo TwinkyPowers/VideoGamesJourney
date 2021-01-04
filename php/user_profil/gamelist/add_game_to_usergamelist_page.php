@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+if(!isset($_SESSION['id']))
+{
+    header("location: ../../../index.php");
+}
+else
+{
+    $gameid = htmlspecialchars($_GET['gameid']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +23,13 @@
         <h1>
             Veuillez selectionner le statut du jeu
         </h1>
-        <a>
+        <a href="./add_game_to_usergamelist_query.php?gameid=<?php echo $gameid?>">
             Terminé
         </a>
-        <a>
+        <a href="./add_gameinprogress_to_usergamelist_query.php?gameid=<?php echo $gameid?>">
             En cours
         </a>
-        <a>
+        <a href="./add_wishgame_to_usergamelist_query.php?gameid=<?php echo $gameid?>">
             À faire prochainement
         </a>
     </div>

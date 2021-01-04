@@ -13,6 +13,7 @@ else{
     $username = $_SESSION['username'];
     $userdescription = $_SESSION['userdescription'];
     $userimage = $_SESSION['userimage'];
+    $platform = htmlspecialchars($_GET['getgeneration']);
 
     {
         try {
@@ -51,9 +52,9 @@ else{
     <div class="list_container">
         <header>
             <h1>
-                <?php echo $_GET['getgeneration'] ?>
+                <?php echo $platform ?>
             </h1>
-            <a href="./gamelist.php" class="game_add">
+            <a href="./gamelist.php?getgeneration=<?php echo $platform ?>" class="game_add">
                 Ajouter un jeu à ma GameList
             </a>
             <a href="./add_new_game.php" class="game_add">
@@ -73,7 +74,7 @@ else{
                 $result = $query->fetchAll();
                 
                 if(isset($_GET['getgeneration'])){
-                    $platform = $_GET['getgeneration'];
+                    $platform = htmlspecialchars($_GET['getgeneration']);
                         foreach($result as $getgameid){
                             $query = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ? AND platform = ?');
                             $query->execute([$getgameid['gameid'], $platform]);
