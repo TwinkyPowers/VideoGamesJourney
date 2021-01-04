@@ -13,6 +13,7 @@ else
 {
     $userid = $_SESSION['id'];
     $gameid = htmlspecialchars($_GET['gameid']);
+    $platform = htmlspecialchars($_GET['getgeneration']);
 
     try
     {
@@ -34,7 +35,7 @@ else
     else{
         $query = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid) VALUES(?,?)');
         $query->execute([$userid,$gameid]);
-        header("location: ./link_to_gamelist_or_userprofil.php?success=1");
+        header("location: ./link_to_gamelist_or_userprofil.php?getgeneration=$platform");
     }
 }
 ?>

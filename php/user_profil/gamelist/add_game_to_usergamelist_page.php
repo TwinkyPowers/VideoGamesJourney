@@ -8,6 +8,7 @@ if(!isset($_SESSION['id']))
 else
 {
     $gameid = htmlspecialchars($_GET['gameid']);
+    $platform = htmlspecialchars($_GET['getgeneration']);
 }
 ?>
 <!DOCTYPE html>
@@ -23,13 +24,13 @@ else
         <h1>
             Veuillez selectionner le statut du jeu
         </h1>
-        <a href="./add_game_to_usergamelist_query.php?gameid=<?php echo $gameid?>">
+        <a href="./add_game_to_usergamelist_query.php?getgeneration=<?php echo $platform ?>&gameid=<?php echo $gameid?>">
             Terminé
         </a>
-        <a href="./add_gameinprogress_to_usergamelist_query.php?gameid=<?php echo $gameid?>">
+        <a href="./add_gameinprogress_to_usergamelist_query.php?getgeneration=<?php echo $platform ?>&gameid=<?php echo $gameid?>">
             En cours
         </a>
-        <a href="./add_wishgame_to_usergamelist_query.php?gameid=<?php echo $gameid?>">
+        <a href="./add_wishgame_to_usergamelist_query.php?getgeneration=<?php echo $platform ?>&gameid=<?php echo $gameid?>">
             À faire prochainement
         </a>
     </div>
