@@ -15,14 +15,14 @@ else{
     $userimage = $_SESSION['userimage'];
     $platform = htmlspecialchars($_GET['getgeneration']);
 
-    {
+    
         try {
             $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
             $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $e){
             die($e->getMessage());
         }
-    }
+    
 }
 ?>
 
