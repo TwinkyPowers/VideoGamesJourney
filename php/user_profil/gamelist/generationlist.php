@@ -84,7 +84,7 @@ else{
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
                                 <p class=\"content\">".$gamecontent["gamename"]."</p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
-                                <a href=\"./update_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
+                                <a href=\"./update_from_user_gamelist.php?gamename=".$gamecontent["gamename"]."&getgeneration=".$platform."&array=1&gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
                             }
                     }
                 }
@@ -115,7 +115,7 @@ else{
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
                                 <p class=\"content\">".$gamecontent["gamename"]."</p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
-                                <a href=\"./update_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
+                                <a href=\"./update_from_user_gamelist.php?gamename=".$gamecontent["gamename"]."&getgeneration=".$platform."&array=2&gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
                             }
                     }
                 }
@@ -146,7 +146,7 @@ else{
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
                                 <p class=\"content\">".$gamecontent["gamename"]."</p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
-                                <a href=\"./update_from_user_gamelist.php?gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
+                                <a href=\"./update_from_user_gamelist.php?gamename=".$gamecontent["gamename"]."&getgeneration=".$platform."&array=3&gameid=".$gamecontent["gameid"]."\" class=\"gamepagelink\">Modifier le statut du jeu</a>";
                             }
                     }
                 }
