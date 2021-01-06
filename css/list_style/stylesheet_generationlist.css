@@ -103,6 +103,7 @@ h2 {
     justify-content: space-around;
     flex-wrap: wrap;
     overflow: scroll;
+    overflow-x: hidden;
     margin-bottom: 2%;
     background-color: #404650;
 }

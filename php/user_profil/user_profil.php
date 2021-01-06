@@ -81,8 +81,8 @@ else
                     <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 3">Playstation 3</a>
                     <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 2">Playstation 2</a>
                     <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation 1">Playstation 1</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation Portable">Playstation Vita</a>
-                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation portable Vita">Playstation Portable</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation Portable">Playstation Portable</a>
+                    <a class="generation" href="./gamelist/generationlist.php?getgeneration=Playstation portable Vita">Playstation Portable Vita</a>
                 </div>
             </div>
             <div class="plateform_container">

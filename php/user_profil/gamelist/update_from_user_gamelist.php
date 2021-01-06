@@ -32,34 +32,34 @@ else
                 "<a href=\"update_inprogress_query.php?array=1&gameid=$gameid&getgeneration=$platform\">
                     Jeux en cours
                 </a>
-                <a href=\"\">
+                <a href=\"update_wishlist_query.php?array=1&gameid=$gameid&getgeneration=$platform\">
                     Liste de souhaits
                 </a>
-                <a href=\"\">
+                <a href=\"delete_from_usergamelist_query.php?array=1&gameid=$gameid&getgeneration=$platform\">
                     Supprimer
                 </a>";
             }
             if($array === "2"){
                 echo 
-                "<a href=\"\">
+                "<a href=\"update_userslinkgames_query.php?array=2&gameid=$gameid&getgeneration=$platform\">
                     Jeux terminés
                 </a>
-                <a href=\"\">
+                <a href=\"update_wishlist_query.php?array=2&gameid=$gameid&getgeneration=$platform\">
                     Liste de souhaits
                 </a>
-                <a href=\"\">
+                <a href=\"delete_from_usergamelist_query.php?array=2&gameid=$gameid&getgeneration=$platform\">
                     Supprimer
                 </a>";
             }
             if($array === "3"){
                 echo 
-                "<a href=\"\">
+                "<a href=\"update_userslinkgames_query.php?array=3&gameid=$gameid&getgeneration=$platform\">
                     Jeux terminés
                 </a>
                 <a href=\"update_inprogress_query.php?array=3&gameid=$gameid&getgeneration=$platform\">
                     Jeux en cours
                 </a>
-                <a href=\"\">
+                <a href=\"delete_from_usergamelist_query.php?array=3&gameid=$gameid&getgeneration=$platform\">
                     Supprimer
                 </a>";
             }

@@ -32,17 +32,18 @@
         $deletequery = $connectbdd->prepare('DELETE FROM userslinkgames WHERE id = ? AND gameid = ?');
         $deletequery->execute([$userid, $gameid]);
 
-        $insertquery = $connectbdd->prepare('INSERT INTO inprogressuserslinkgames(id,gameid) VALUES(?,?)');
-        $insertquery->execute([$userid, $gameid]);
-        
+        header("location: ./generationlist.php?getgeneration=$platform");
+    }
+
+    if($array === "2"){
+        $deletequery = $connectbdd->prepare('DELETE FROM inprogressuserslinkgames WHERE id = ? AND gameid = ?');
+        $deletequery->execute([$userid, $gameid]);
+
         header("location: ./generationlist.php?getgeneration=$platform");
     }
     elseif($array === "3"){
         $deletequery = $connectbdd->prepare('DELETE FROM wishlistuserslinkgames WHERE id = ? AND gameid = ?');
         $deletequery->execute([$userid, $gameid]);
-
-        $insertquery = $connectbdd->prepare('INSERT INTO inprogressuserslinkgames(id,gameid) VALUES(?,?)');
-        $insertquery->execute([$userid, $gameid]);
 
         header("location: ./generationlist.php?getgeneration=$platform");
     }

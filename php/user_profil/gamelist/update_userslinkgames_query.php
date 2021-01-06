@@ -28,11 +28,11 @@
         }
     }
 
-    if($array === "1"){
-        $deletequery = $connectbdd->prepare('DELETE FROM userslinkgames WHERE id = ? AND gameid = ?');
+    if($array === "2"){
+        $deletequery = $connectbdd->prepare('DELETE FROM inprogressuserslinkgames WHERE id = ? AND gameid = ?');
         $deletequery->execute([$userid, $gameid]);
 
-        $insertquery = $connectbdd->prepare('INSERT INTO inprogressuserslinkgames(id,gameid) VALUES(?,?)');
+        $insertquery = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid) VALUES(?,?)');
         $insertquery->execute([$userid, $gameid]);
         
         header("location: ./generationlist.php?getgeneration=$platform");
@@ -41,9 +41,9 @@
         $deletequery = $connectbdd->prepare('DELETE FROM wishlistuserslinkgames WHERE id = ? AND gameid = ?');
         $deletequery->execute([$userid, $gameid]);
 
-        $insertquery = $connectbdd->prepare('INSERT INTO inprogressuserslinkgames(id,gameid) VALUES(?,?)');
+        $insertquery = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid) VALUES(?,?)');
         $insertquery->execute([$userid, $gameid]);
-
+        
         header("location: ./generationlist.php?getgeneration=$platform");
     }
 ?>
