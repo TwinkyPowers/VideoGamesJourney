@@ -93,5 +93,5 @@ else {
     }
 }
 
-header("Location: ./form_update_profil.php?success=1");
+header("Location: ./user_profil.php");
 ?>
