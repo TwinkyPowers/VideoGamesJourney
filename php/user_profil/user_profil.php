@@ -11,6 +11,25 @@ else
     $username = $_SESSION['username'];
     $userdescription = $_SESSION['userdescription'];
     $userimage = $_SESSION['userimage'];
+
+    try {
+        $connectbdd = new PDO("mysql:host=localhost;dbname=journeymemories", "root", "");
+        $connectbdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch(PDOException $e){
+        die($e->getMessage());
+    }
+
+    $query1 = $connectbdd->prepare('SELECT COUNT(*) FROM userslinkgames WHERE id = ?');
+    $query1->execute([$userid]);
+    $result1 = $query1->fetch();
+    
+    $query2 = $connectbdd->prepare('SELECT COUNT(*) FROM inprogressuserslinkgames WHERE id = ?');
+    $query2->execute([$userid]);
+    $result2 = $query2->fetch();
+
+    $query3 = $connectbdd->prepare('SELECT COUNT(*) FROM wishlistuserslinkgames WHERE id = ?');
+    $query3->execute([$userid]);
+    $result3 = $query3->fetch();
 }
 ?>
 
@@ -51,7 +70,18 @@ else
                 </p>
             </div> 
             <div class="user_stats">
-                <!-- à voir plus tard -->
+                <h2 class="user_stats_title">
+                    Statistiques
+                </h2>
+                <p class="user_stats_content">
+                    Jeux terminés <br> <span class="user_stats_values"><?php echo $result1[0] ?></span>
+                </p>
+                <p class="user_stats_content">
+                    Jeux en cours <br> <span class="user_stats_values"><?php echo $result2[0] ?></span>
+                </p>
+                <p class="user_stats_content">
+                    Liste de souhaits <br> <span class="user_stats_values"><?php echo $result3[0] ?></span>
+                </p>
             </div>
         </div>
 
