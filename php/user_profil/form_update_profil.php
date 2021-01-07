@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/user_profil_style/stylesheet_update_profil.css">
-    <title>Modification profil | JourneyMemories</title>
+    <title>Modification profil | VideoGamesJourney</title>
 </head>
 <?php
 if(isset($_GET['error'])){
