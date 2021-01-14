@@ -113,9 +113,18 @@ body {
     }
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 645px) {
     .submit_input {
         width: 50%;
+    }
+    .form_container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .submit_input {
+        width: 70%;
     }
 }
 
@@ -128,5 +137,38 @@ body {
 @media only screen and (max-width: 370px) {
     .submit_input {
         width: 55%;
+    }
+    .form_container {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-height: 551px) {
+    .submit_input{
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-height: 475px) {
+    .submit_input{
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-height: 450px) {
+    .form_container {
+        height: 90vh;
+    }
+    .submit_input{
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-height: 415px) {
+    .form_container {
+        height: 100vh;
+    }
+    .submit_input{
+        margin-top: 10%;
     }
 }

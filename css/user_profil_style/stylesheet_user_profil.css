@@ -238,3 +238,7 @@ body {
     font-family: "regular_roboto";
     src: url(../../ressources/fonts/Regular.ttf);
 }
+
+@media only screen and (max-width: px) {
+    
+}
