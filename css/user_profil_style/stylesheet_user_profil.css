@@ -240,6 +240,8 @@ body {
     src: url(../../ressources/fonts/Regular.ttf);
 }
 
+/* responsive */
+
 @media only screen and (max-width: 1345px) {
     .header_p {
         font-size: 100%;
@@ -297,20 +299,72 @@ body {
 
 @media only screen and (max-width: 945px) {
     .main_container {
+        display: flex;
+        height: 341vh;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
-        /* height: ; */
     }
 
     .user_info_container{
-        width: 95%;
+        height: 65vh;
+        width: 85%;
+        /* margin-top: -5%; */
     }
 
     .fav_games_container{
-        width: 95%;
+        height: 65vh;
+        width: 85%;
+        margin-top: 1.5%;
+    }
+
+    .gamelist_title {
+        height: 5%;
     }
 
     .gamelist_container {
-        width: 95%;
+        height: 200vh;
+        width: 85%;
+        margin-top: 1.5%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .plateform_container {
+        height: 50vh;
+        flex-basis: 40%;
+    }
+
+    .generation {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        font-size: 115%;
+    }
+    header {
+        height: 20vh;
+        justify-content: center;
+    }
+    .header_p {
+        height: 10vh;
+        flex-basis: 20%;
+        font-size: 115%;
+    }
+}
+@media only screen and (max-width: 890px) {
+    .header_p {
+        flex-basis: 22%;
+        margin: 0%;
+    }
+    header {
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 810px) {
+    header {
+
+    }
+    .header_p {
+        
     }
 }
