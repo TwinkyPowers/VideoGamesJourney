@@ -122,6 +122,12 @@ body {
     }
 }
 
+@media only screen and (max-height: 551px) {
+    .submit_input{
+        margin-top: 10%;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .submit_input {
         width: 70%;
@@ -131,21 +137,6 @@ body {
 @media only screen and (max-width: 400px) {
     input {
         width: 140%;
-    }
-}
-
-@media only screen and (max-width: 370px) {
-    .submit_input {
-        width: 55%;
-    }
-    .form_container {
-        width: 95%;
-    }
-}
-
-@media only screen and (max-height: 551px) {
-    .submit_input{
-        margin-top: 10%;
     }
 }
 
@@ -170,5 +161,14 @@ body {
     }
     .submit_input{
         margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .submit_input {
+        width: 55%;
+    }
+    .form_container {
+        width: 95%;
     }
 }

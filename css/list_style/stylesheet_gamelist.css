@@ -28,6 +28,7 @@
     transition: 0.7s;
     border: solid 2px rgb(31, 31, 31);
     background-color: #404650;
+    text-align: center;
 }
 
 .nav_bar_links:hover {
@@ -81,6 +82,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .game_add:hover {
@@ -139,6 +141,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .gamepagelink {
@@ -189,4 +192,154 @@ body {
 @font-face {
     font-family: "regular_roboto";
     src: url(../../ressources/fonts/Regular.ttf);
+}
+
+@media only screen and (max-width: 1345px) {
+    .nav_bar_links {
+        font-size: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1175px) {
+    .nav_bar_links {
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .game_add {
+        flex-basis: 25%;
+    }
+}
+
+@media only screen and (max-width: 1118px) {
+    .nav_bar_links {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .nav_bar {
+        height: 20vh;
+        justify-content: center;
+    }
+    .nav_bar_links {
+        height: 10vh;
+        flex-basis: 20%;
+        font-size: 115%;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .nav_bar {
+        height: 15vh;
+    }
+
+    .nav_bar_links {
+        font-size: 110%;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .nav_bar_links {
+        flex-basis: 16%;
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .game_add {
+        flex-basis: 30%;
+    }
+}
+
+@media only screen and (max-width: 913px) {
+    .nav_bar_links {
+        flex-basis: 22%;
+        margin: 0%;
+    }
+    .nav_bar {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 805px) {
+    .gamepagelink {
+        text-align: center;
+        height: 16%;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .nav_bar_links {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .game_add {
+        flex-basis: 35%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    .nav_bar_links {
+        flex-basis: 23%;
+        font-size: 96%;
+    }
+}
+
+@media only screen and (max-width: 669px) {
+    .game_add {
+        height: 58%;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    .nav_bar_links {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    .nav_bar {
+        flex-wrap: wrap;
+        height: 21vh;
+    }
+    .nav_bar_links {
+        font-size: 100%;
+        height: 7vh;
+        flex-basis: 35%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .nav_bar_links {
+        flex-basis: 42%;
+    }
+}
+
+@media only screen and (max-width: 416px) {
+    span {
+        flex-basis: 24%;
+    }
+
+    .content {
+        flex-basis: 24%;
+    }
+
+    .gamepagelink {
+        flex-basis: 24%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .nav_bar_links {
+        flex-basis: 45%;
+    }
 }
