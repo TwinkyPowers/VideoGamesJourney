@@ -46,7 +46,7 @@ else
         <a class="header_p" href="./form_update_profil.php">
             Modification du profil
         </a>
-        <a class="header_p" href="">
+        <a class="header_p" href="./contacts.php">
             Contacts
         </a>
         <a class="header_p" href="">
