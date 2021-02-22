@@ -1,0 +1,46 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selector_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 5vh;
+    border: 1px solid red;
+}
+
+.selector {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.home_button {
+    margin-bottom: 1%;
+}
+
+.array_container {
+    border: 1px red solid;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+p {
+    flex-basis: 16.66%;
+    height: 10%;
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
