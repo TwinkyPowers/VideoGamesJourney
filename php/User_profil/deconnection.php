@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id']))
+    {
+        header("location: ../../index.php");
+    }
+    else{
+        $idrole = $_SESSION['idrole'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +21,11 @@
     <div class="main_container">
         <h1>Voulez vous vraiment vous déconnecter?</h1>
         <a href="./deconnection_query.php">Confirmer la déconnection</a>
+        <?php 
+            if($idrole == 1){
+                echo "<a href=\"./admin_space.php\">Espace Admin</a>";
+            }
+        ?>
     </div>
 </body>
 </html>

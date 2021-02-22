@@ -4,6 +4,7 @@ $email = htmlspecialchars($_POST['email_adress']);
 $passw1 = htmlspecialchars($_POST['passw1']);
 $passw2 = htmlspecialchars($_POST['passw2']);
 $description = '';
+$idrole = 0;
 
 if(empty($username)){
     header("Location: inscription_form.php?error=empty");
@@ -71,8 +72,8 @@ if($passw1 === $passw2){
         header("Location: inscription_form.php?error=existmail");
     }
 
-    $query = $connectbdd->prepare('INSERT INTO users(username,email,passw,userdescription,userimage) VALUES(?,?,?,?,?)');
-    $query->execute([$username,$email,$passw1,$description,$userimagename]);
+    $query = $connectbdd->prepare('INSERT INTO users(username,email,passw,userdescription,userimage,idrole) VALUES(?,?,?,?,?,?)');
+    $query->execute([$username,$email,$passw1,$description,$userimagename,$idrole]);
 
     header("Location: connection_form.php?accountcreate=1");
 }

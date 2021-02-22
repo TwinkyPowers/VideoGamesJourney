@@ -26,6 +26,7 @@ if($success){
         $_SESSION['id'] = $userinfo[0];
         $_SESSION['userdescription'] = $userinfo[4];
         $_SESSION['userimage'] = $userinfo[5];
+        $_SESSION['idrole'] = $userinfo[6];
 
         header("location: ../user_profil/user_profil.php");
     }
