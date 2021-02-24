@@ -6,6 +6,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: "regular_roboto";
+}
+
+h1 {
+    color: grey;
 }
 
 .selector_container {
@@ -14,33 +19,70 @@ body {
     align-items: center;
     width: 35%;
     height: 5vh;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 .selector {
     flex-basis: 45%;
     display: flex;
     justify-content: center;
+    color: grey;
+    font-size: 115%;
 }
 
 .home_button {
     margin-bottom: 1%;
+    color: grey;
+    font-size: 120%;
 }
 
 .array_container {
-    border: 1px red solid;
+    border: 1px black solid;
     width: 100%;
     height: 75vh;
     display: flex;
+    justify-content: center;
     overflow: scroll;
     overflow-x: hidden;
+    flex-wrap: wrap;
+    background-color: #393e46;
+    border-radius: 1%;
 }
 
-p {
-    flex-basis: 16.66%;
-    height: 10%;
-    border: solid 1px red;
+.array_info {
+    flex-basis: 12%;
+    height: 15%;
+    border: solid 1px black;
+    border-radius: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: #404650;
+}
+
+
+.array_info1 {
+    flex-basis: 16%;
+    height: 15%;
+    border: solid 1px black;
+    border-radius: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #404650;
+}
+
+a {
+    color: rgb(180, 180, 180);
+}
+
+.red {
+    color: rgb(165, 6, 6);
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
 }
