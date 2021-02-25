@@ -172,7 +172,8 @@ header {
 .games_container {
     flex-basis: 95%;
     height: 95%;
-    border: solid 1px black;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
     display: flex;
     justify-content: space-around;
     align-items: center;
