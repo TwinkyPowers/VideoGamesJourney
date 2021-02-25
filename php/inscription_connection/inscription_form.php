@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/inscription_connection_style/stylesheet_inscription_form.css">
-    <title>Inscription | VideoGamesJourney</title>
+    <title>Inscription | JourneyMemories</title>
 </head>
 <?php
     $error = '';

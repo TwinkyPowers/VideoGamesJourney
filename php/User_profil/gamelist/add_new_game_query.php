@@ -76,6 +76,5 @@ else
     $query = $connectbdd->prepare('INSERT INTO games(gamename,platform,gametype,cover) VALUES(?,?,?,?)');
     $query->execute([$gamename,$platform,$gametype,$covername]);
 
-    //revoir la redirection//
-    header("Location: ../user_profil.php");
+    header("Location: add_new_game.php?success=gameadd");
 }

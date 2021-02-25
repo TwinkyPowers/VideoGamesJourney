@@ -10,11 +10,6 @@
     margin-top: 1%;
     font-family: "regular_roboto";
     border: solid 1px rgb(31, 31, 31);
-    background-image: url(../../ressources/png/Mascotte\ videogamesjourney.png);
-    background-repeat: no-repeat;
-    background-size: 28%;
-    background-position-y: 60%;
-    background-position-x: 20%;
 }
 
 .form {
@@ -39,7 +34,7 @@ input {
     font-size: 90%;
     text-align: center;
     margin-top: 2.5%;
-    border-radius: 3%;
+    border-radius: 1%;
     border-style: solid;
     width: 65%;
     height: 4vh;
