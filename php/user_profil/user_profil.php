@@ -85,16 +85,22 @@ else
             </div>
         </div>
 
-        <div class="fav_games_container">
-            <div class="gamecard">
+        <div class="last_games_container">
+                <!-- <div class="games_container">
+                    <h2 class="last_games_title">Derniers jeux terminés</h2>
+                        <div class="games">
+                            <img src="./gamelist/covers/assassinscreedoriginsjaquettepc.jpg" class="games_cover">
+                            <div class="games_info">
 
-            </div>
-            <div class="gamecard">
+                            </div>
+                        </div>
+                        <div class="games">
 
-            </div>
-            <div class="gamecard">
+                        </div>
+                        <div class="games">
 
-            </div>
+                        </div>
+                </div> -->
         </div>
 
         <div class="gamelist_container">

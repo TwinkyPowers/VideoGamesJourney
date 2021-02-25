@@ -8,6 +8,11 @@ header {
     border-radius: 1%;
     background-color: #393e46;
     border: solid 1px rgb(31, 31, 31);
+    background-image: url(../../ressources/png/Logo-Laurent.png), url(../../ressources/png/titleheadervgj.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 4.5%, 15%;
+    background-position-x: 1%, 7%;
+    background-position-y: 54%, center;
 }
 
 .header_p {
@@ -136,17 +141,69 @@ header {
     color: rgb(206, 205, 205);
 }
 
-.fav_games_container {
+.last_games_container {
     width: 48%;
     height: 48%;
     border: solid 1px rgb(31, 31, 31);
     border-radius: 1%;
-    background-image: url(../../ressources/png/underconstruction.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30%;
     box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "regular_roboto";
+    flex-wrap: wrap;
 }
+
+.last_games_title {
+    flex-basis: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black ; */
+    font-size: 200%;
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
+    /* margin-top: -4.9%; */
+}
+
+.games_container {
+    flex-basis: 95%;
+    height: 95%;
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+    height: 70%;
+    border: 1px solid black;
+}
+
+.games_cover {
+    height: 10vh;
+    overflow: hidden;
+    border: rgb(37, 37, 37) solid 1px;
+    border-radius: 2%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.350), 0 0 1em rgba(0, 0, 0, 0.350), 0 0 0em rgba(0, 0, 0, 0.350);
+}
+
+/* .games_info {
+    flex-basis: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black solid 1px;
+    margin-bottom: -8%;
+} */
 
 .gamelist_container {
     display: flex;
@@ -270,7 +327,7 @@ body {
         width: 49%;
     }
 
-    .fav_games_container {
+    .last_games_container {
         width: 49%;
     }
 
@@ -298,7 +355,7 @@ body {
         width: 50%;
     }
 
-    .fav_games_container{
+    .last_games_container{
         height: 65vh;
         width: 85%;
         margin-top: 1.5%;
@@ -380,7 +437,7 @@ body {
         width: 95%;
     }
 
-    .fav_games_container {
+    .last_games_container {
         width: 95%;
     }
 
@@ -402,7 +459,7 @@ body {
         width: 98%;
     }
 
-    .fav_games_container {
+    .last_games_container {
         width: 98%;
     }
 

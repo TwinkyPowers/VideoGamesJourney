@@ -7,7 +7,7 @@
     <title>VideoGamesJourney</title>
 </head>
 <body>
-    <img src="./ressources/png/underconstruction.png">
+    <img src="./ressources/png/Logo-Laurent.png">
     <div class="description_container">
         <p>
             Le site web <strong>VideoGamesJourney</strong> a pour objectif de proposer aux joueurs un espace personnel pour retracer leurs différentes expériences dans le monde du jeu vidéo

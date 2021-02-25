@@ -8,6 +8,11 @@
     border-radius: 1%;
     background-color: #393e46;
     border: solid 1px rgb(31, 31, 31);
+    background-image: url(../../ressources/png/Logo-Laurent.png), url(../../ressources/png/titleheadervgj.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 4.5%, 15%;
+    background-position-x: 1%, 7%;
+    background-position-y: 54%, center;
 }
 
 .nav_bar_links {
