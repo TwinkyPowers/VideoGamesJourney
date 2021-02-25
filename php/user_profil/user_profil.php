@@ -86,21 +86,33 @@ else
         </div>
 
         <div class="last_games_container">
-                <!-- <div class="games_container">
+                <div class="games_container">
                     <h2 class="last_games_title">Derniers jeux terminés</h2>
                         <div class="games">
-                            <img src="./gamelist/covers/assassinscreedoriginsjaquettepc.jpg" class="games_cover">
-                            <div class="games_info">
-
-                            </div>
+                            <img src="./gamelist/covers/61e6sU9SIzL._AC_SY445_.jpg" class="games_cover">
+                                <div class="games_info">
+                                    <h3 class="game_title">
+                                        GTA Vice city
+                                    </h3>
+                                </div>
                         </div>
                         <div class="games">
-
+                            <img src="./gamelist/covers/raymsa0f.png" class="games_cover">
+                                <div class="games_info">
+                                    <h3 class="game_title">
+                                        Rayman
+                                    </h3>
+                                </div>
                         </div>
                         <div class="games">
-
+                            <img src="./gamelist/covers/Kingdom_Hearts.jpg" class="games_cover">
+                                <div class="games_info">
+                                    <h3 class="game_title">
+                                        Kingdom Hearts
+                                    </h3>
+                                </div>
                         </div>
-                </div> -->
+                </div>
         </div>
 
         <div class="gamelist_container">
