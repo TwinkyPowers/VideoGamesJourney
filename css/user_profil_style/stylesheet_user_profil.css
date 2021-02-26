@@ -408,6 +408,7 @@ body {
     header {
         height: 20vh;
         justify-content: center;
+        background-image: none;
     }
     .header_p {
         height: 10vh;
@@ -543,9 +544,7 @@ body {
     .header_p {
         flex-basis: 42%;
     }
-}
 
-@media only screen and (max-width: 490px) {
     .user_stats_title {
         font-size: 130%;
     }
@@ -563,6 +562,14 @@ body {
         padding-left: 0.3%;
         padding-right: 0.3%;
     }
+
+    .game_title {
+        font-size: 85%;
+    }
+
+    .games_cover {
+        width: 18vh;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -571,6 +578,14 @@ body {
     }
     .generation {
         width: 80%;
+    }
+
+    .games_container {
+        overflow: scroll;
+    }
+
+    .games_cover {
+        width: 19vh;
     }
 }
 

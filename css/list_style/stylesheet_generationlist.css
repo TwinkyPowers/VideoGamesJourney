@@ -230,6 +230,7 @@ body {
     .nav_bar {
         height: 20vh;
         justify-content: center;
+        background-image: none;
     }
     .nav_bar_links {
         height: 10vh;
