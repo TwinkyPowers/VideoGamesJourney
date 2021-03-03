@@ -148,7 +148,7 @@
     height: 75%;
     margin-top: 1%;
     padding: 0.5%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -156,8 +156,8 @@
     border: solid 1px rgb(31, 31, 31);
     border-radius: 1%;
     box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
-    /* overflow: scroll;
-    overflow-x: hidden; */
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .commentary {
@@ -166,6 +166,7 @@
     box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
     border: solid 1px rgb(31, 31, 31);
     border-radius: 1%;
+    margin-top: 1.5%;
 }
 
 .commentary_header {

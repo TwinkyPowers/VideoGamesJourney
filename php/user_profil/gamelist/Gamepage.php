@@ -65,6 +65,13 @@
             <p class="platform"><?php echo $gamecontent['platform']?></p>
         </div>
         <div class="commentaries_section">
+            <?php 
+                if(isset($_GET['erreur'])){
+                    if($_GET['erreur'] == "titlesize"){
+                        echo "La taille du titre envoyé est trop elevée";
+                    }
+                }
+            ?>
             <div class="header_com_section">
                 <h2 class="commentaries_section_title">Espace commentaire</h2>
                 <a class="create_com_link" href="./Gamepage.php?gameid=<?php echo $gameid ?>&create=1">Écrire un commentaire</a>
@@ -82,8 +89,10 @@
                                 ";          
                         }
                         elseif($form == 2){
+                            $comid = htmlspecialchars($_GET['comid']);
+
                             echo "
-                                <form method=\"POST\" action=\"./comment_query.php?form=2&gameid=".$gameid."\" enctype=\"multipart/form-data\">
+                                <form method=\"POST\" action=\"./comment_query.php?comid=".$comid."&form=2&gameid=".$gameid."\" enctype=\"multipart/form-data\">
                                     <input type=\"text\" name=\"com_title\" class=\"create_com_title\" placeholder=\"Titre\">
                                     <textarea type=\"text\" name=\"com_text\" class=\"create_com_text\"></textarea>
                                     <input type=\"submit\" name=\"submit\" value=\"Envoyer\" class=\"submit_input\">
@@ -98,26 +107,32 @@
                         }
                     }
                     else {
-                        echo "
-                            <div class=\"commentary\">
-                            <div class=\"commentary_header\">
-                                <p class=\"com_info\">username</p>
-                                <p class=\"com_info\">01/02/2020</p>
-                                <a class=\"link_com\" href=\"gamepage.php?gameid=".$gameid."&create=2\">Modifier</a>
-                                <a class=\"link_com\" href=\"comment_query.php?create=3\">Supprimer</a>
-                            </div>
-                            <div class=\"commentary_content\">
-                                <h2 class=\"commentary_title\">jeu super bien</h2>
-                                <p class=\"commentary_text\">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                                </p>
-                            </div>
-                        </div>
+                        $getcommentaries = $connectbdd->prepare('SELECT * FROM commentariesaboutgames WHERE gameid = ? ORDER BY date_creation DESC');
+                        $getcommentaries->execute([$gameid]);
+                        $result_of_getcommentaries = $getcommentaries->fetchAll();
+
+                        foreach($result_of_getcommentaries as $com_content){
+                            $getusername = $connectbdd->prepare('SELECT username FROM users WHERE id = ?');
+                            $getusername->execute([$com_content['id']]);
+                            $username_from_com = $getusername->fetch();
+
+                            echo 
+                            "
+                                <div class=\"commentary\">
+                                    <div class=\"commentary_header\">
+                                        <p class=\"com_info\">".$username_from_com[0]."</p>
+                                        <p class=\"com_info\">".$com_content['date_creation']."</p>    
+                                        <a class=\"link_com\" href=\"gamepage.php?comid=".$com_content['comid']."&gameid=".$gameid."&create=2\">Modifier</a>
+                                        <a class=\"link_com\" href=\"comment_query.php?comid=".$com_content['comid']."&create=3\">Supprimer</a>
+                                    </div>
+                                    <div class=\"commentary_content\">
+                                        <h2 class=\"commentary_title\">".$com_content['title']."</h2>
+                                        <p class=\"commentary_text\">".$com_content['commentary']."</p>
+                                    </div>
+                                </div>
                             ";
+                        }
+                        
                     }
                 ?>
             </div>
