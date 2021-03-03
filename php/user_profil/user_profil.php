@@ -50,13 +50,13 @@ else
 <body>
     <header>
         <a class="header_p" href="./form_update_profil.php">
-            Modification du profil
+            Modifier mon profil
         </a>
         <a class="header_p" href="./contacts.php">
             Contacts
         </a>
         <a class="header_p" href="">
-            Fonctionnement du site
+            Fonctionnalités
         </a>
         <a class="header_p" href="../User_profil/deconnection.php">
             Déconnexion
@@ -80,13 +80,13 @@ else
                     Statistiques
                 </h2>
                 <p class="user_stats_content">
-                    Jeux terminés <br> <span class="user_stats_values"><?php echo $result1[0] ?></span>
+                    Jeux terminés <span class="user_stats_values"><?php echo $result1[0] ?></span>
                 </p>
                 <p class="user_stats_content">
-                    Jeux en cours <br> <span class="user_stats_values"><?php echo $result2[0] ?></span>
+                    Jeux en cours <span class="user_stats_values"><?php echo $result2[0] ?></span>
                 </p>
                 <p class="user_stats_content">
-                    Liste de souhaits <br> <span class="user_stats_values"><?php echo $result3[0] ?></span>
+                    Jeux souhaités <span class="user_stats_values"><?php echo $result3[0] ?></span>
                 </p>
             </div>
         </div>
@@ -108,7 +108,9 @@ else
                                     <img src=\"./gamelist/covers/".$gamecontent['cover']."\" class=\"games_cover\">
                                         <div class=\"games_info\">
                                             <h3 class=\"game_title\">
-                                                ".$gamecontent['gamename']."
+                                                <a href=\".\" class=\"gamepage_link\">
+                                                    ".$gamecontent['gamename']."
+                                                </a>
                                             </h3>
                                         </div>
                                     </div>";
