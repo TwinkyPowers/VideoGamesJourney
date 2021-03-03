@@ -121,16 +121,21 @@
                                 <div class=\"commentary\">
                                     <div class=\"commentary_header\">
                                         <p class=\"com_info\">".$username_from_com[0]."</p>
-                                        <p class=\"com_info\">".$com_content['date_creation']."</p>    
-                                        <a class=\"link_com\" href=\"gamepage.php?comid=".$com_content['comid']."&gameid=".$gameid."&create=2\">Modifier</a>
-                                        <a class=\"link_com\" href=\"comment_query.php?comid=".$com_content['comid']."&create=3\">Supprimer</a>
+                                        <p class=\"com_info\">".$com_content['date_creation']."</p>";
+
+                                        if($_SESSION['id'] === $com_content['id']){
+                                            echo "<a class=\"link_com\" href=\"gamepage.php?comid=".$com_content['comid']."&gameid=".$gameid."&create=2\">Modifier</a>
+                                            <a class=\"link_com\" href=\"comment_query.php?comid=".$com_content['comid']."&gameid=".$gameid."&form=3\">Supprimer</a>";
+                                        }
+
+                            echo "
                                     </div>
-                                    <div class=\"commentary_content\">
-                                        <h2 class=\"commentary_title\">".$com_content['title']."</h2>
-                                        <p class=\"commentary_text\">".$com_content['commentary']."</p>
+                                        <div class=\"commentary_content\">
+                                            <h2 class=\"commentary_title\">".$com_content['title']."</h2>
+                                            <p class=\"commentary_text\">".$com_content['commentary']."</p>
+                                        </div>
                                     </div>
-                                </div>
-                            ";
+                                ";
                         }
                         
                     }
