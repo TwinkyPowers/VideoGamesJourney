@@ -114,7 +114,7 @@ else
                                         <img src=\"./gamelist/covers/".$gamecontent['cover']."\" class=\"games_cover\">
                                             <div class=\"games_info\">
                                                 <h3 class=\"game_title\">
-                                                    <a href=\".\" class=\"gamepage_link\">
+                                                    <a href=\"./gamelist/gamepage.php?gameid=".$gamecontent['gameid']."\" class=\"gamepage_link\">
                                                         ".$gamecontent['gamename']."
                                                     </a>
                                                 </h3>

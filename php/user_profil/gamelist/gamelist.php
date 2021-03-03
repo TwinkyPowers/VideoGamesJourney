@@ -72,7 +72,7 @@
 
                 foreach($result as $gamescontent){
                 echo "<span><img src=\"./covers/".$gamescontent["cover"]."\"></span>
-                <p class=\"content\"><a href=\".\" class=\"gamepage_link\">".$gamescontent["gamename"]."</a></p>
+                <p class=\"content\"><a href=\"./gamepage.php?gameid=".$gamescontent['gameid']."\" class=\"gamepage_link\">".$gamescontent["gamename"]."</a></p>
                 <p class=\"content\">".$gamescontent["gametype"]."</p>
                 <a href=\"./add_game_to_usergamelist_page.php?getgeneration=".$platform."&gameid=".$gamescontent["gameid"]."\" class=\"add_to\">Ajouter à ma GameList</a>";
                 }

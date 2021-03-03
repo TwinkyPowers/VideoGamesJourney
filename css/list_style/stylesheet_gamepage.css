@@ -146,7 +146,6 @@
 .commentaries_list {
     width: 96%;
     height: 75%;
-    border: 1px solid blueviolet;
     margin-top: 1%;
     padding: 0.5%;
     display: flex;
@@ -176,6 +175,21 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.com_info {
+    /* border: 1px solid red; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.link_com {
+    /* border: 1px solid red; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    color: rgb(217, 165, 22);
 }
 
 .commentary_content {

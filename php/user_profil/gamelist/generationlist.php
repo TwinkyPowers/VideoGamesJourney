@@ -88,7 +88,7 @@ else{
                         
                             if(isset($gamecontent['cover'])){
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                                <p class=\"content\"><a href=\".\" class=\"gamepage_link\">".$gamecontent["gamename"]."</a></p>
+                                <p class=\"content\"><a href=\"./gamepage.php?gameid=".$gamecontent['gameid']."\" class=\"gamepage_link\">".$gamecontent["gamename"]."</a></p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
                                 <a href=\"./update_from_user_gamelist.php?gamename=".$gamecontent["gamename"]."&getgeneration=".$platform."&array=1&gameid=".$gamecontent["gameid"]."\" class=\"change_status\">Modifier le statut</a>";
                             }
@@ -119,7 +119,7 @@ else{
                         
                             if(isset($gamecontent['cover'])){
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                                <p class=\"content\"><a href=\".\" class=\"gamepage_link\">".$gamecontent["gamename"]."</a></p>
+                                <p class=\"content\"><a href=\"./gamepage.php?gameid=".$gamecontent['gameid']."\" class=\"gamepage_link\">".$gamecontent["gamename"]."</a></p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
                                 <a href=\"./update_from_user_gamelist.php?gamename=".$gamecontent["gamename"]."&getgeneration=".$platform."&array=2&gameid=".$gamecontent["gameid"]."\" class=\"change_status\">Modifier le statut</a>";
                             }
@@ -150,7 +150,7 @@ else{
                         
                             if(isset($gamecontent['cover'])){
                                 echo "<span><img src=\"./covers/".$gamecontent["cover"]."\"></span>
-                                <p class=\"content\"><a href=\".\" class=\"gamepage_link\">".$gamecontent["gamename"]."</a></p>
+                                <p class=\"content\"><a href=\"./gamepage.php?gameid=".$gamecontent['gameid']."\" class=\"gamepage_link\">".$gamecontent["gamename"]."</a></p>
                                 <p class=\"content\">".$gamecontent["gametype"]."</p>
                                 <a href=\"./update_from_user_gamelist.php?gamename=".$gamecontent["gamename"]."&getgeneration=".$platform."&array=3&gameid=".$gamecontent["gameid"]."\" class=\"change_status\">Modifier le statut</a>";
                             }
