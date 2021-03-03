@@ -1,0 +1,259 @@
+.nav_bar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    border-radius: 1%;
+    background-color: #393e46;
+    border: solid 1px rgb(31, 31, 31);
+    background-image: url(../../ressources/png/Logo-Laurent.png), url(../../ressources/png/titleheadervgj.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 4.5%, 15%;
+    background-position-x: 1%, 7%;
+    background-position-y: 54%, center;
+}
+
+.nav_bar_links {
+    margin-right: 3%;
+    height: 7vh;
+    font-family: "regular_roboto";
+    text-decoration: none;
+    color: rgb(217, 165, 22);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.397);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 13%;
+    font-size: 115%;
+    padding: 0.1%;
+    transition: 0.7s;
+    border: solid 2px rgb(31, 31, 31);
+    background-color: #404650;
+    text-align: center;
+}
+
+.nav_bar_links:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
+.main_container {
+    width: 95%;
+    height: 80vh;
+    border-radius: 1%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    border: solid 1px rgb(31, 31, 31);
+    margin-top: 1%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    color: #bbbbbb;
+    font-family: "regular_roboto";
+    background-color: #393e46;
+}
+
+.game_container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #404650;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+}
+
+.game_cover {
+    width: 22vh;
+    height: 34vh;
+    border: rgb(37, 37, 37) solid 1px;
+    border-radius: 2%;
+    box-shadow: 4px 6px 17px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 4px 6px 17px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 4px 6px 17px 0px rgba(0,0,0,0.43);
+}
+
+.game_title {
+    font-size: 150%;
+}
+
+/* .game_type {
+    font-size: 140%;
+} */
+
+.platform {
+    font-size: 140%;
+}
+
+.commentaries_section {
+    width: 63%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #404650;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+}
+
+.header_com_section {
+    width: 98%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.commentaries_section_title {
+    font-size: 150%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create_com_link {
+    color: rgb(217, 165, 22);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.397);
+    width: 30%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 115%;
+    border: solid 2px rgb(31, 31, 31);
+    border-radius: 5%;
+    transition: 0.7s;
+    text-decoration: none;
+}
+
+.create_com_link:hover {
+    transform: scale(1.02);
+    transition: 0.7s;
+}
+
+.commentaries_list {
+    width: 96%;
+    height: 75%;
+    border: 1px solid blueviolet;
+    margin-top: 1%;
+    padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+    /* overflow: scroll;
+    overflow-x: hidden; */
+}
+
+.commentary {
+    width: 99%;
+    height: 60%;
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+}
+
+.commentary_header {
+    height: 12%;
+    width: 100%;
+    /* border: 1px solid brown; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.commentary_content {
+    /* border: 1px solid white; */
+    height: 87%;
+    width: 100%;
+}
+
+.commentary_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commentary_text {
+    text-align: justify;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-shadow: none;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95%;
+    width: 60%;
+    border: solid 1px rgb(31, 31, 31);
+    border-radius: 1%;
+    box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.452);
+}
+
+input {
+    margin-top: 1%;
+    border-radius: 3%;
+    border-style: none;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
+    font-family: "regular_roboto";
+    text-align: left;
+    font-size: 90%;
+}
+
+.create_com_title {
+    width: 80%;
+}
+
+.create_com_text {
+    width: 79%;
+    height: 60%;
+    margin-top: 1%;
+    font-size: 90%;
+}
+
+.submit_input {
+    width: 20%;
+    height: 5vh;    
+    color: rgb(217, 165, 22);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    font-size: 115%;
+    cursor: pointer;
+    border-radius: 5%;
+    border: solid 2px rgb(31, 31, 31);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
+    background-color: #404650;
+    margin-top: 2%;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222831;
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
+}

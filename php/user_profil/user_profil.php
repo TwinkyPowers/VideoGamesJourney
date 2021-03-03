@@ -93,27 +93,34 @@ else
 
         <div class="last_games_container">
                 <div class="games_container">
-                    <h2 class="last_games_title">Jeux terminés</h2>
+                    
                     <?php
                         $query = $connectbdd->prepare('SELECT gameid FROM userslinkgames WHERE id = ? ORDER BY RAND() LIMIT 3');
                         $query->execute([$userid]);
                         $result = $query->fetchAll();
 
-                        foreach($result as $getgameid){
-                            $query1 = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ?');
-                            $query1->execute([$getgameid['gameid']]);
-                            $gamecontent = $query1->fetch();
+                        if(empty($result)){
+                            echo "<h2 class=\"last_games_title\">Aucun jeu terminé pour le moment</h2>";
+                        }
+                        else {
+                            echo "<h2 class=\"last_games_title\">Jeux terminés</h2>";
 
-                            echo "<div class=\"games\">
-                                    <img src=\"./gamelist/covers/".$gamecontent['cover']."\" class=\"games_cover\">
-                                        <div class=\"games_info\">
-                                            <h3 class=\"game_title\">
-                                                <a href=\".\" class=\"gamepage_link\">
-                                                    ".$gamecontent['gamename']."
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </div>";
+                            foreach($result as $getgameid){
+                                $query1 = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ?');
+                                $query1->execute([$getgameid['gameid']]);
+                                $gamecontent = $query1->fetch();
+
+                                echo "<div class=\"games\">
+                                        <img src=\"./gamelist/covers/".$gamecontent['cover']."\" class=\"games_cover\">
+                                            <div class=\"games_info\">
+                                                <h3 class=\"game_title\">
+                                                    <a href=\".\" class=\"gamepage_link\">
+                                                        ".$gamecontent['gamename']."
+                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </div>";
+                            }
                         }
                     ?>
                 </div>
