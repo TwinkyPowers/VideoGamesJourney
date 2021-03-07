@@ -95,7 +95,7 @@ else
                 <div class="games_container">
                     
                     <?php
-                        $query = $connectbdd->prepare('SELECT gameid FROM userslinkgames WHERE id = ? ORDER BY RAND() LIMIT 3');
+                        $query = $connectbdd->prepare('SELECT gameid FROM userslinkgames WHERE id = ? ORDER BY date_of_add1 DESC LIMIT 3');
                         $query->execute([$userid]);
                         $result = $query->fetchAll();
 
@@ -103,7 +103,7 @@ else
                             echo "<h2 class=\"last_games_title\">Aucun jeu terminé pour le moment</h2>";
                         }
                         else {
-                            echo "<h2 class=\"last_games_title\">Jeux terminés</h2>";
+                            echo "<h2 class=\"last_games_title\">Derniers jeux terminés</h2>";
 
                             foreach($result as $getgameid){
                                 $query1 = $connectbdd->prepare('SELECT * FROM games WHERE gameid = ?');

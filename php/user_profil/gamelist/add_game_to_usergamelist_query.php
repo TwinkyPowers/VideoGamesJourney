@@ -33,7 +33,7 @@ else
         header("location: ./gamelist.php?error=exist");
     }
     else{
-        $query = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid) VALUES(?,?)');
+        $query = $connectbdd->prepare('INSERT INTO userslinkgames(id,gameid,date_of_add1) VALUES(?,?,NOW())');
         $query->execute([$userid,$gameid]);
         header("location: ./link_to_gamelist_or_userprofil.php?getgeneration=$platform");
     }
