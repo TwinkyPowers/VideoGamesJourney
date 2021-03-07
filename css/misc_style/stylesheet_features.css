@@ -1,0 +1,153 @@
+.logo_container {
+    /* border: 1px red solid; */
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo {
+    width: 20vh;
+    height: 20vh;
+}
+
+h1 {
+    font-family: 'regular_roboto';
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
+}
+.features_container {
+    border: green 1px solid;
+    width: 90%;
+    height: 61vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    background-color: #393e46;
+    border-radius: 1%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.767);
+    border: solid 1px rgb(31, 31, 31);
+}
+.feature_description {
+    width: 50%;
+    padding: 1%;
+    text-align: center;
+    font-family: 'regular_roboto';
+    color: #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.750), 0 0 1em rgba(0, 0, 0, 0.750), 0 0 0em rgba(0, 0, 0, 0.750);
+}
+.screen_about_feature {
+    width: 60%;
+    height: 60vh;
+    padding: 0.2%;
+    border-left: solid 1px rgb(31, 31, 31);
+}
+.input_container {
+    /* border: 1px solid yellow; */
+    width: 90%;
+    height: 7vh;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input {
+    color: rgb(217, 165, 22);
+    text-decoration: none;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    border-radius: 5%;
+    background-color: #404650;
+    width: 15vh;
+    height: 5.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'regular_roboto';
+    transition: 0.7s;
+}
+
+.input:hover{
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
+.input_user {
+    color: rgb(217, 165, 22);
+    text-decoration: none;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.39);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.500), 0 0 1em rgba(0, 0, 0, 0.500), 0 0 0em rgba(0, 0, 0, 0.500);
+    border-radius: 5%;
+    background-color: #404650;
+    width: 18vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'regular_roboto';
+    transition: 0.7s;
+    text-align: center;
+}
+
+.input_user:hover {
+    transition: 0.7s;
+    transform: scale(1.05);
+}
+
+@font-face {
+    font-family: "regular_roboto";
+    src: url(../../ressources/fonts/Regular.ttf);
+}
+
+@media only screen and (max-width: 1250px) {
+    .features_container {
+        flex-direction: column;
+        height: 85vh;
+    }
+
+    .feature_description {
+        padding: 0%;
+    }
+
+    .screen_about_feature {
+        border: none;
+        padding: 0%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .feature_description {
+        width: 95%;
+    }
+    
+    .features_container {
+        width: 99%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .screen_about_feature {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .screen_about_feature {
+        display: none;
+    }
+
+    .features_container {
+        height: 45vh;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222831;
+}

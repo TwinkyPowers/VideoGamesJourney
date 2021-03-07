@@ -55,7 +55,7 @@ else
         <a class="header_p" href="./contacts.php">
             Contacts
         </a>
-        <a class="header_p" href="">
+        <a class="header_p" href="../misc/features.php">
             Fonctionnalités
         </a>
         <a class="header_p" href="../User_profil/deconnection.php">
